@@ -31,7 +31,7 @@ function (Settings) {
      * your banana web application.
      * @type {String}
      */
-    solr: "http://localhost:8983/solr/",
+    solr: "/solr/",
     solr_core: "logstash_logs",
 
     /**
@@ -46,7 +46,7 @@ function (Settings) {
      * internal to banana.
      * @type {String}
      */
-    banana_index: "banana-int",
+    banana_index: "dashboard",
 
     /**
      * Panel modules available. Panels will only be loaded when they are defined in the
