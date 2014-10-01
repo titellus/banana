@@ -4,3 +4,4 @@ dist
 target
 build*
 bower_components
+*.iml
