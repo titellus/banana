@@ -1,0 +1,573 @@
+{
+  "title": "INSPIRE Indicators - Year 2013 - Metadata availability and conformity",
+  "services": {
+    "query": {
+      "idQueue": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "list": {
+        "0": {
+          "query": "*:*",
+          "alias": "",
+          "color": "#7EB26D",
+          "id": 0,
+          "pin": false,
+          "type": "lucene"
+        }
+      },
+      "ids": [
+        0
+      ]
+    },
+    "filter": {
+      "idQueue": [
+        0,
+        1,
+        2
+      ],
+      "list": {},
+      "ids": []
+    }
+  },
+  "rows": [
+    {
+      "title": "Indicator reporting",
+      "height": "480px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 8,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"dsv_num\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 30,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "arrangement": "vertical",
+          "chart": "bar",
+          "counter_pos": "right",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Number of spatial data sets reported - DSv_Num",
+          "show_help_message": true,
+          "info_mode": "markdown",
+          "help_message": "DSv_Num indicator is used.",
+          "logAxis": true,
+          "loxAxis": false
+        },
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "markdown",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2013 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2013 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2013 - Network services availability and conformity)",
+          "style": {}
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting (2)",
+      "height": "300px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"mdi1\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Existence of metadata (data sets and services) - mdi1"
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi11\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Existence of metadata (Annex I) - MDi11"
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting (3)",
+      "height": "300px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi12\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Existence of metadata (Annex II) - MDi12"
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi13\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Existence of metadata (Annex III) - MDi13"
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting (4)",
+      "height": "300px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi14\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 0,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Existence of metadata (spatial data services) - MDi14"
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"NSi1\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Accessibility of metadata through discovery services"
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting - conformity",
+      "height": "350px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "markdown",
+          "content": "This section describes the conformity of metadata.",
+          "style": {}
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"mdi2\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of metadata (data sets and services) - mdi2"
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting - conformity (2)",
+      "height": "350px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi21\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of metadata (Annex I) - MDi21"
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi22\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of metadata (Annex II) - MDi22"
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting - conformity (3)",
+      "height": "350px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi23\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of metadata (Annex III) - MDi23"
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"MDi24\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#265656"
+          ],
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of metadata (spatial data services) - MDi24"
+        }
+      ]
+    }
+  ],
+  "editable": false,
+  "index": {
+    "interval": "none",
+    "pattern": "[logstash-]YYYY.MM.DD",
+    "default": "_all"
+  },
+  "style": "light",
+  "failover": false,
+  "panel_hints": true,
+  "loader": {
+    "save_gist": false,
+    "save_elasticsearch": true,
+    "save_local": true,
+    "save_default": true,
+    "save_temp": true,
+    "save_temp_ttl_enable": true,
+    "save_temp_ttl": "30d",
+    "load_gist": false,
+    "load_elasticsearch": true,
+    "load_elasticsearch_size": 20,
+    "load_local": true,
+    "hide": false,
+    "dropdown_collections": false
+  },
+  "solr": {
+    "server": "/solr/",
+    "core_name": "data",
+    "core_list": [
+      "dashboard",
+      "data"
+    ],
+    "global_params": "&fq=%2BdocumentType:indicator %2BreportingYear:2013"
+  }
+}

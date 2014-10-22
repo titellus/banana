@@ -48,7 +48,7 @@
                     "loadingEditor": false,
                     "status": "Stable",
                     "mode": "markdown",
-                    "content": "* [Indicators for year 2013](http://apps.titellus.net/solr/dashboard/#/dashboard/solr/INSPIRE%20Indicators%20-%20Year%202013)",
+                    "content": "* [Indicators for year 2013](#/dashboard/solr/INSPIRE%20Indicators%20-%20Year%202013%20-%20Metadata%20availability%20and%20conformity)\n\n* [Indicators for year 2012](#/dashboard/solr/INSPIRE%20Indicators%20-%20Year%202012%20-%20Metadata%20availability%20and%20conformity)",
                     "style": {}
                 },
                 {
@@ -212,7 +212,7 @@
         "save_temp": true,
         "save_temp_ttl_enable": true,
         "save_temp_ttl": "30d",
-        "load_gist": true,
+        "load_gist": false,
         "load_elasticsearch": true,
         "load_elasticsearch_size": 20,
         "load_local": true,
