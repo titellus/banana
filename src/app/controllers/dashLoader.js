@@ -23,8 +23,8 @@ function (angular, _) {
     // This function should be replaced by one-way binding feature of AngularJS 1.3
     $scope.resetNewDefaults = function() {
       $scope.new = {
-        server: 'http://localhost:8983/solr/',
-        core_name: 'searchlogs',
+        server: '/solr/',
+        core_name: 'data',
         time_field: 'event_timestamp'
       };
     };

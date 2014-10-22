@@ -32,7 +32,7 @@ function (Settings) {
      * @type {String}
      */
     solr: "/solr/",
-    solr_core: "logstash_logs",
+    solr_core: "data",
 
     /**
      * The default Solr index to use for storing objects internal to Banana, such as 

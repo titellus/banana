@@ -358,8 +358,8 @@
     "hide": false
   },
   "solr": {
-    "server": "http://localhost:8983/solr/",
-    "core_name": "collection1",
+    "server": "/solr/",
+    "core_name": "data",
     "core_list": [],
     "global_params": "&df=message"
   }
