@@ -133,7 +133,6 @@
             "#DEDAF7"
           ],
           "title": "Number of network services reported - nsv_numallserv",
-          "loxAxis": false,
           "logAxis": true
         },
         {

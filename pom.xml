@@ -9,6 +9,55 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>0.0.11</version>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <nodeVersion>${node.version}</nodeVersion>
+              <npmVersion>${npm.version}</npmVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm download modules</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.1</version>
+        <executions>
+          <execution>
+            <id>grunt-build</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <phase>prepare-package</phase>
+            <configuration>
+              <executable>${project.basedir}/node/node</executable>
+              <arguments>
+                <argument>${project.basedir}/node_modules/grunt-cli/bin/grunt</argument>
+                <argument>--gruntfile</argument>
+                <argument>${project.basedir}/Gruntfile.js</argument>
+                <argument>build</argument>
+              </arguments>
+              <workingDirectory>${project.basedir}</workingDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>2.6</version>
@@ -23,7 +72,7 @@
               <outputDirectory>${project.build.directory}/web/dashboard</outputDirectory>
               <resources>
                 <resource>
-                  <directory>${project.basedir}/src</directory>
+                  <directory>${project.basedir}/dist</directory>
                   <targetPath>${project.build.directory}/web/dashboard</targetPath>
                 </resource>
               </resources>
@@ -34,5 +83,7 @@
     </plugins>
   </build>
   <properties>
+    <node.version>v0.10.25</node.version>
+    <npm.version>1.3.23</npm.version>
   </properties>
 </project>

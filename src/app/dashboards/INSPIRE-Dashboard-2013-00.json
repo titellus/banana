@@ -136,8 +136,7 @@
           "show_help_message": true,
           "info_mode": "markdown",
           "help_message": "DSv_Num indicator is used.",
-          "logAxis": true,
-          "loxAxis": false
+          "logAxis": true
         },
         {
           "error": false,

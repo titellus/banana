@@ -1,1625 +1,817 @@
 {
-    "title": "INSPIRE Indicators - Year 2013",
-    "services": {
-        "query": {
-            "idQueue": [
-                1,
-                2,
-                3,
-                4
-            ],
-            "list": {
-                "0": {
-                    "query": "*:*",
-                    "alias": "",
-                    "color": "#7EB26D",
-                    "id": 0,
-                    "pin": false,
-                    "type": "lucene"
-                }
-            },
-            "ids": [
-                0
-            ]
-        },
-        "filter": {
-            "idQueue": [
-                0,
-                1,
-                2
-            ],
-            "list": {},
-            "ids": []
+  "title": "Statistics",
+  "services": {
+    "query": {
+      "idQueue": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "list": {
+        "0": {
+          "query": "*:*",
+          "alias": "",
+          "color": "#7EB26D",
+          "id": 0,
+          "pin": false,
+          "type": "lucene"
         }
+      },
+      "ids": [
+        0
+      ]
     },
-    "rows": [
-        {
-            "title": "Query",
-            "height": "50px",
-            "editable": true,
-            "collapse": true,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 9,
-                    "editable": true,
-                    "group": [
-                        "default"
-                    ],
-                    "type": "query",
-                    "label": "Search",
-                    "history": [],
-                    "remember": 10,
-                    "pinned": true,
-                    "query": "*",
-                    "title": "Search",
-                    "spyable": true,
-                    "def_type": ""
-                },
-                {
-                    "span": 3,
-                    "editable": true,
-                    "type": "hits",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&&wt=json&rows=0",
-                        "basic_query": "",
-                        "custom": ""
-                    },
-                    "style": {
-                        "font-size": "14pt"
-                    },
-                    "arrangement": "horizontal",
-                    "chart": "total",
-                    "counter_pos": "above",
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "spyable": true,
-                    "title": "Total Hits"
-                }
-            ]
-        },
-        {
-            "title": "Filter",
-            "height": "150px",
-            "editable": true,
-            "collapse": true,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "spyable": true,
-                    "group": [
-                        "default"
-                    ],
-                    "type": "filtering"
-                },
-                {
-                    "error": false,
-                    "span": 3,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&facet=true&facet.field=indicatorName&facet.limit=100&facet.missing=true",
-                        "custom": ""
-                    },
-                    "mode": "count",
-                    "field": "indicatorName",
-                    "stats_field": "",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": false,
-                    "other": false,
-                    "size": 100,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "table",
-                    "counter_pos": "above",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Choose an indicator",
-                    "show_help_message": true,
-                    "info_mode": "text",
-                    "info_font_size": "10pt",
-                    "help_message": "Select an indicator to add a filter."
-                },
-                {
-                    "error": false,
-                    "span": 4,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&facet=true&facet.field=territory&facet.limit=10&facet.missing=true",
-                        "custom": ""
-                    },
-                    "mode": "count",
-                    "field": "territory",
-                    "stats_field": "",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 10,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "table",
-                    "counter_pos": "above",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Choose a country"
-                }
-            ]
-        },
-        {
-            "title": "Metadata availability and conformity",
-            "height": "50px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 12,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "# Metadata availability and conformity",
-                    "style": {},
-                    "title": ""
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting",
-            "height": "480px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 8,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue&facet.missing=true",
-                        "custom": "&fq=indicatorName:\"dsv_num\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 30,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "vertical",
-                    "chart": "bar",
-                    "counter_pos": "right",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Number of spatial data sets reported",
-                    "show_help_message": true,
-                    "info_mode": "markdown",
-                    "help_message": "DSv_Num indicator is used."
-                },
-                {
-                    "error": false,
-                    "span": 4,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "This section describe the existence of metadata records on data sets and services with statistics on each Annex.",
-                    "style": {}
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting (2)",
-            "height": "300px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"mdi1\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Existence of metadata (data sets and services)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi11\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Existence of metadata (Annex I)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting (3)",
-            "height": "300px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi12\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Existence of metadata (Annex II)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi13\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Existence of metadata (Annex III)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting (4)",
-            "height": "300px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi14\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Existence of metadata (spatial data services)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"NSi1\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Accessibility of metadata through discovery services"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - conformity",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "This section describes the conformity of metadata. The conformity is based on ...",
-                    "style": {}
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"mdi2\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of metadata (data sets and services)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - conformity (2)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi21\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of metadata (Annex I)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi22\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of metadata (Annex II)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - conformity (3)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi23\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of metadata (Annex III)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"MDi24\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of metadata (spatial data services)"
-                }
-            ]
-        },
-        {
-            "title": "Spatial data sets availability and conformity",
-            "height": "50px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 12,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "# Spatial data sets availability and conformity",
-                    "style": {}
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - data set conformity",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 8,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue&facet.missing=true",
-                        "custom": "&fq=indicatorName:\"dsv21\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 10,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "bar",
-                    "counter_pos": "right",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Number of conformant spatial data sets (Annex I)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - data set conformity (2)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 8,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue&facet.missing=true",
-                        "custom": "&fq=indicatorName:\"dsv22\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 10,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "bar",
-                    "counter_pos": "right",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Number of conformant spatial data sets (Annex II)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - data set conformity (3)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 8,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue&facet.missing=true",
-                        "custom": "&fq=indicatorName:\"dsv23\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 10,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "bar",
-                    "counter_pos": "right",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Number of conformant spatial data sets (Annex III)"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - data set conformity (4)",
-            "height": "480px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"DSi2\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of spatial data sets (all annexes)"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "title": "Accessibility of spatial data sets through view and download services",
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"NSi2\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0
-                },
-                {
-                    "error": false,
-                    "span": 1,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "Not created: DSi2.x",
-                    "style": {}
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - data set conformity (5)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"NSi21\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Accessibility of spatial data sets through view services"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"NSi22\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Accessibility of spatial data sets through download services"
-                }
-            ]
-        },
-        {
-            "title": "Network services availability and conformity",
-            "height": "150px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 12,
-                    "editable": true,
-                    "type": "text",
-                    "loadingEditor": false,
-                    "status": "Stable",
-                    "mode": "markdown",
-                    "content": "# Network services availability and conformity",
-                    "style": {},
-                    "title": ""
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - service conformity",
-            "height": "480px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 8,
-                    "editable": true,
-                    "type": "terms",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&&stats=true&stats.facet=territory&stats.field=indicatorValue&facet.missing=true",
-                        "custom": "&fq=indicatorName:\"nsv_numallserv\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 0,
-                    "exclude": [],
-                    "missing": true,
-                    "other": true,
-                    "size": 30,
-                    "order": "descending",
-                    "style": {
-                        "font-size": "10pt"
-                    },
-                    "donut": false,
-                    "tilt": false,
-                    "labels": true,
-                    "arrangement": "horizontal",
-                    "chart": "bar",
-                    "counter_pos": "right",
-                    "lastColor": "",
-                    "spyable": true,
-                    "chartColors": [
-                        "#7EB26D",
-                        "#EAB839",
-                        "#6ED0E0",
-                        "#EF843C",
-                        "#E24D42",
-                        "#1F78C1",
-                        "#BA43A9",
-                        "#705DA0",
-                        "#508642",
-                        "#CCA300",
-                        "#447EBC",
-                        "#C15C17",
-                        "#890F02",
-                        "#0A437C",
-                        "#6D1F62",
-                        "#584477",
-                        "#B7DBAB",
-                        "#F4D598",
-                        "#70DBED",
-                        "#F9BA8F",
-                        "#F29191",
-                        "#82B5D8",
-                        "#E5A8E2",
-                        "#AEA2E0",
-                        "#629E51",
-                        "#E5AC0E",
-                        "#64B0C8",
-                        "#E0752D",
-                        "#BF1B00",
-                        "#0A50A1",
-                        "#962D82",
-                        "#614D93",
-                        "#9AC48A",
-                        "#F2C96D",
-                        "#65C5DB",
-                        "#F9934E",
-                        "#EA6460",
-                        "#5195CE",
-                        "#D683CE",
-                        "#806EB7",
-                        "#3F6833",
-                        "#967302",
-                        "#2F575E",
-                        "#99440A",
-                        "#58140C",
-                        "#052B51",
-                        "#511749",
-                        "#3F2B5B",
-                        "#E0F9D7",
-                        "#FCEACA",
-                        "#CFFAFF",
-                        "#F9E2D2",
-                        "#FCE2DE",
-                        "#BADFF4",
-                        "#F9D9F9",
-                        "#DEDAF7"
-                    ],
-                    "title": "Number of network services reported"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - service conformity (1)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"nsi42\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of view network services"
-                },
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"nsi41\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of discovery network services"
-                }
-            ]
-        },
-        {
-            "title": "Indicator reporting - service conformity (2)",
-            "height": "350px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 5,
-                    "editable": true,
-                    "type": "map",
-                    "loadingEditor": false,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-                        "custom": "&fq=indicatorName:\"nsi43\""
-                    },
-                    "mode": "mean",
-                    "field": "territory",
-                    "stats_field": "indicatorValue",
-                    "decimal_points": 2,
-                    "map": "europe",
-                    "colors": [
-                        "#A0E2E2",
-                        "#265656"
-                    ],
-                    "size": 100,
-                    "exclude": [],
-                    "spyable": true,
-                    "index_limit": 0,
-                    "title": "Conformity of download network services"
-                }
-            ]
-        },
-        {
-            "title": "Events",
-            "height": "250px",
-            "editable": true,
-            "collapse": false,
-            "collapsable": true,
-            "panels": [
-                {
-                    "error": false,
-                    "span": 12,
-                    "editable": true,
-                    "group": [
-                        "default"
-                    ],
-                    "type": "table",
-                    "size": 25,
-                    "pages": 500,
-                    "offset": 1125,
-                    "style": {
-                        "font-size": "9pt"
-                    },
-                    "overflow": "min-height",
-                    "fields": [
-                        "territory",
-                        "indicatorName",
-                        "indicatorValue",
-                        "id"
-                    ],
-                    "highlight": [],
-                    "sortable": true,
-                    "header": true,
-                    "paging": true,
-                    "spyable": true,
-                    "queries": {
-                        "mode": "all",
-                        "ids": [
-                            0
-                        ],
-                        "query": "q=*%3A*&fq=documentType:indicator&&sort=indicatorName asc&wt=json&rows=12500",
-                        "basic_query": "q=*%3A*&fq=documentType:indicator&&sort=indicatorName asc"
-                    },
-                    "field_list": false,
-                    "status": "Stable",
-                    "trimFactor": 300,
-                    "normTimes": true,
-                    "title": "Indicator values",
-                    "saveOption": "json",
-                    "exportSize": 12500,
-                    "exportAll": true,
-                    "displayLinkIcon": true,
-                    "imageFields": [],
-                    "imgFieldWidth": "auto",
-                    "imgFieldHeight": "85px",
-                    "sort": [
-                        "indicatorName",
-                        "asc"
-                    ],
-                    "important_fields": [
-                        "indicatorName",
-                        "indicatorType",
-                        "indicatorValue",
-                        "reportingDate",
-                        "territory"
-                    ]
-                }
-            ]
-        }
-    ],
-    "editable": true,
-    "index": {
-        "interval": "none",
-        "pattern": "[logstash-]YYYY.MM.DD",
-        "default": "_all"
-    },
-    "style": "light",
-    "failover": false,
-    "panel_hints": true,
-    "loader": {
-        "save_gist": false,
-        "save_elasticsearch": true,
-        "save_local": true,
-        "save_default": true,
-        "save_temp": true,
-        "save_temp_ttl_enable": true,
-        "save_temp_ttl": "30d",
-        "load_gist": true,
-        "load_elasticsearch": true,
-        "load_elasticsearch_size": 20,
-        "load_local": true,
-        "hide": false,
-        "dropdown_collections": false
-    },
-    "solr": {
-        "server": "/solr/",
-        "core_name": "data",
-        "core_list": [
-            "dashboard",
-            "data"
-        ],
-        "global_params": "&fq=documentType:indicator"
+    "filter": {
+      "idQueue": [
+        0,
+        1,
+        2
+      ],
+      "list": {},
+      "ids": []
     }
+  },
+  "rows": [
+    {
+      "title": "Query",
+      "height": "50px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 9,
+          "editable": false,
+          "group": [
+            "default"
+          ],
+          "type": "query",
+          "label": "Search",
+          "history": [
+            "*:*"
+          ],
+          "remember": 10,
+          "pinned": true,
+          "query": "*",
+          "title": "Search",
+          "spyable": true,
+          "def_type": ""
+        },
+        {
+          "span": 3,
+          "editable": false,
+          "type": "hits",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&&wt=json&rows=0",
+            "basic_query": "",
+            "custom": ""
+          },
+          "style": {
+            "font-size": "14pt"
+          },
+          "arrangement": "horizontal",
+          "chart": "total",
+          "counter_pos": "above",
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "spyable": true,
+          "title": "Total Hits"
+        }
+      ]
+    },
+    {
+      "title": "Filter",
+      "height": "150px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 8,
+          "editable": false,
+          "spyable": true,
+          "group": [
+            "default"
+          ],
+          "type": "filtering"
+        },
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireAnnex&facet.limit=10",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "inspireAnnex",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": true,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Number of records per annex"
+        }
+      ]
+    },
+    {
+      "title": "INSPIRE statistics",
+      "height": "700px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 12,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireTheme&facet.limit=35",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "inspireTheme",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 35,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "vertical",
+          "chart": "bar",
+          "counter_pos": "right",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Number of record per themes"
+        }
+      ]
+    },
+    {
+      "title": "Type of resources",
+      "height": "350px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=resourceType&facet.limit=10",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "resourceType",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": true,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17"
+          ],
+          "title": "Type of resources"
+        },
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireServiceType&facet.limit=10",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "inspireServiceType",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": true,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#f9b5b0",
+            "#f81b0b",
+            "#85342e",
+            "#6d504e",
+            "#ba6d2f",
+            "#f3730c",
+            "#f4c59f"
+          ],
+          "title": "Type of services"
+        },
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=spatialRepresentationType&facet.limit=10",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "spatialRepresentationType",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": true,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#9fcff8",
+            "#0488f8",
+            "#30628c",
+            "#294358",
+            "#080b0d"
+          ],
+          "title": "Type of datasets"
+        }
+      ]
+    },
+    {
+      "title": "Spatial information",
+      "height": "350px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 4,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "resolutionScaleDenominator",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "bar",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Spatial resolution"
+        },
+        {
+          "error": false,
+          "span": 8,
+          "editable": false,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=coordinateSystem&facet.limit=40",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "coordinateSystem",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 40,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "bar",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Coordinate system used"
+        }
+      ]
+    },
+    {
+      "title": "Events",
+      "height": "250px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 9,
+          "editable": false,
+          "group": [
+            "default"
+          ],
+          "type": "table",
+          "size": 30,
+          "pages": 500,
+          "offset": 0,
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "resourceTitle",
+            "overviewUrl"
+          ],
+          "highlight": [],
+          "sortable": false,
+          "header": true,
+          "paging": true,
+          "spyable": true,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&&wt=json&rows=15000",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&"
+          },
+          "field_list": true,
+          "status": "Stable",
+          "trimFactor": 300,
+          "normTimes": true,
+          "title": "Records found",
+          "saveOption": "json",
+          "exportSize": 15000,
+          "exportAll": true,
+          "displayLinkIcon": true,
+          "imageFields": [
+            "overviewUrl"
+          ],
+          "imgFieldWidth": "auto",
+          "imgFieldHeight": "85px",
+          "sort": [
+            "event_timestamp",
+            "desc"
+          ],
+          "important_fields": [
+            "dateStamp",
+            "documentType",
+            "harvestedDate",
+            "harvesterId",
+            "id",
+            "inspireAnnex",
+            "inspireConformResource",
+            "inspireServiceType",
+            "inspireTheme",
+            "inspireTheme_syn",
+            "mainLanguage",
+            "mdContact",
+            "metadataIdentifier",
+            "otherLanguage",
+            "record",
+            "recordOperateOn",
+            "recordOperatedBy",
+            "recordOperatedByType",
+            "relatedTo",
+            "resourceTitle",
+            "resourceType",
+            "serviceType",
+            "territory",
+            "resourceAbstract",
+            "keyword",
+            "overviewUrl"
+          ],
+          "enableImageField": true
+        },
+        {
+          "error": false,
+          "span": 3,
+          "editable": false,
+          "type": "facet",
+          "loadingEditor": false,
+          "status": "Stable",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource",
+            "custom": ""
+          },
+          "group": "default",
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "territory",
+            "publicationYearForResource",
+            "inspireAnnex",
+            "inspireTheme",
+            "resolutionScaleDenominator",
+            "spatialRepresentationType",
+            "resourceType",
+            "pointOfContactOrgForResource"
+          ],
+          "field_list": true,
+          "spyable": true,
+          "facet_limit": 34,
+          "foundResults": true,
+          "header_title": "",
+          "toggle_element": null,
+          "title": "Narrow your search",
+          "offset": 0,
+          "exportSize": null
+        }
+      ]
+    }
+  ],
+  "editable": false,
+  "index": {
+    "interval": "none",
+    "pattern": "[logstash-]YYYY.MM.DD",
+    "default": "_all"
+  },
+  "style": "light",
+  "failover": false,
+  "panel_hints": true,
+  "loader": {
+    "save_gist": false,
+    "save_elasticsearch": true,
+    "save_local": true,
+    "save_default": true,
+    "save_temp": true,
+    "save_temp_ttl_enable": true,
+    "save_temp_ttl": "30d",
+    "load_gist": false,
+    "load_elasticsearch": true,
+    "load_elasticsearch_size": 20,
+    "load_local": true,
+    "hide": false,
+    "dropdown_collections": false
+  },
+  "solr": {
+    "server": "/solr/",
+    "core_name": "data",
+    "core_list": [
+      "dashboard",
+      "data"
+    ],
+    "global_params": "&fq=documentType:metadata"
+  }
 }
