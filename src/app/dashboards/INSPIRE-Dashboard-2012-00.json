@@ -1,5 +1,5 @@
 {
-  "title": "INSPIRE Indicators - Year 2012 - Metadata availability and conformity",
+  "title": "INSPIRE Reporting 2013 - Ref. year 2012 - Metadata availability and conformity",
   "services": {
     "query": {
       "idQueue": [
@@ -146,7 +146,7 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2012 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2012 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Indicators - Year 2012 - Network services availability and conformity)",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Network services availability and conformity)",
           "style": {}
         }
       ]
