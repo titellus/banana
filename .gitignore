@@ -1,4 +1,7 @@
 node_modules
 .aws-config.json
 dist
+target
+build*
 bower_components
+*.iml

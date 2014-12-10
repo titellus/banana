@@ -1,5 +1,5 @@
 {
-  "title": "New Time Series Dashboard",
+  "title": "INSPIRE Indicator trends",
   "services": {
     "query": {
       "idQueue": [
@@ -25,16 +25,17 @@
     "filter": {
       "idQueue": [
         1,
-        2
+        2,
+        3
       ],
       "list": {
         "0": {
-          "from": "NOW/MINUTE-15MINUTE",
-          "to": "NOW/MINUTE%2B1MINUTE",
-          "field": "",
+          "from": "NOW/YEAR-2YEAR",
+          "to": "NOW/YEAR%2B1YEAR",
+          "field": "reportingDate",
           "type": "time",
-          "fromDateObj": "2014-08-20T12:53:56.895Z",
-          "toDateObj": "2014-08-20T13:08:56.895Z",
+          "fromDateObj": "2012-10-21T13:36:39.948Z",
+          "toDateObj": "2014-10-21T13:36:39.949Z",
           "mandate": "must",
           "active": true,
           "alias": "",
@@ -50,33 +51,27 @@
     {
       "title": "Query and Time Window",
       "height": "50px",
-      "editable": true,
+      "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": "",
           "span": 5,
-          "editable": true,
+          "editable": false,
           "type": "timepicker",
           "loadingEditor": false,
           "status": "Stable",
           "mode": "relative",
           "time_options": [
-            "5m",
-            "15m",
-            "1h",
-            "6h",
-            "12h",
-            "24h",
-            "7d",
-            "30d",
-            "90d",
             "1y",
+            "2y",
+            "3y",
+            "4y",
             "5y"
           ],
-          "timespan": "15m",
-          "timefield": "event_timestamp",
+          "timespan": "2y",
+          "timefield": "reportingDate",
           "timeformat": "",
           "refresh": {
             "enable": false,
@@ -89,96 +84,85 @@
         },
         {
           "error": false,
-          "span": 4,
-          "editable": true,
+          "span": 7,
+          "editable": false,
           "group": [
             "default"
           ],
           "type": "query",
           "label": "Search",
-          "history": [],
+          "history": [
+            "*:*",
+            "territory:de",
+            "territory:fr"
+          ],
           "remember": 10,
           "pinned": true,
           "query": "*:*",
           "title": "Search",
           "spyable": true,
           "def_type": ""
-        },
-        {
-          "span": 3,
-          "editable": true,
-          "type": "hits",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&&wt=json&rows=0",
-            "basic_query": "",
-            "custom": ""
-          },
-          "style": {
-            "font-size": "14pt"
-          },
-          "arrangement": "horizontal",
-          "chart": "total",
-          "counter_pos": "above",
-          "donut": false,
-          "tilt": false,
-          "labels": true,
-          "spyable": true,
-          "title": "Total Hits"
         }
       ]
     },
     {
       "title": "Filters",
       "height": "50px",
-      "editable": true,
+      "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": false,
-          "span": 12,
-          "editable": true,
+          "span": 9,
+          "editable": false,
           "spyable": true,
           "group": [
             "default"
           ],
           "type": "filtering"
+        },
+        {
+          "error": false,
+          "span": 3,
+          "editable": false,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "markdown",
+          "content": "Reporting is not available for all countries for 2012 and 2013. This needs improvements.",
+          "style": {}
         }
       ]
     },
     {
       "title": "Graph",
-      "height": "250px",
-      "editable": true,
+      "height": "450px",
+      "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "span": 12,
-          "editable": true,
+          "editable": false,
           "type": "histogram",
           "loadingEditor": false,
-          "mode": "count",
-          "time_field": "event_timestamp",
+          "mode": "values",
+          "time_field": "reportingDate",
           "queries": {
             "mode": "all",
             "ids": [
               0
             ],
-            "query": "",
-            "custom": ""
+            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000",
+            "custom": "&fq=indicatorName:dsv_num"
           },
           "max_rows": 100000,
-          "value_field": null,
-          "group_field": null,
+          "value_field": "indicatorValue",
+          "group_field": "territory",
           "auto_int": true,
           "resolution": 100,
-          "interval": "10s",
+          "interval": "7d",
           "intervals": [
             "auto",
             "1s",
@@ -195,14 +179,14 @@
             "1y"
           ],
           "fill": 0,
-          "linewidth": 3,
+          "linewidth": 2,
           "timezone": "browser",
           "spyable": true,
           "zoomlinks": true,
-          "bars": true,
-          "stack": true,
-          "points": false,
-          "lines": false,
+          "bars": false,
+          "stack": false,
+          "points": true,
+          "lines": true,
           "legend": true,
           "x-axis": true,
           "y-axis": true,
@@ -213,23 +197,22 @@
             "value_type": "cumulative",
             "query_as_alias": false
           },
-          "title": "Event Counts",
-          "lines_smooth": false,
-          "error": false
+          "title": "Number of spatial data sets reported",
+          "lines_smooth": true
         }
       ]
     },
     {
       "title": "Table",
       "height": "150px",
-      "editable": true,
+      "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": false,
           "span": 12,
-          "editable": true,
+          "editable": false,
           "type": "table",
           "loadingEditor": false,
           "status": "Stable",
@@ -238,25 +221,45 @@
             "ids": [
               0
             ],
-            "query": "",
-            "basic_query": "",
-            "custom": ""
+            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc&wt=json&rows=500",
+            "basic_query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc",
+            "custom": "&fq=indicatorName:dsv_num"
           },
           "size": 100,
           "pages": 5,
           "offset": 0,
-          "sort": [],
+          "sort": [
+            "territory",
+            "desc"
+          ],
           "group": "default",
           "style": {
             "font-size": "9pt"
           },
           "overflow": "min-height",
-          "fields": [],
+          "fields": [
+            "indicatorName",
+            "territory",
+            "reportingYear",
+            "indicatorValue"
+          ],
+          "important_fields": [
+            "_version_",
+            "documentType",
+            "id",
+            "indicatorName",
+            "indicatorType",
+            "indicatorValue",
+            "reportingDate",
+            "reportingDateSubmission",
+            "reportingYear",
+            "territory"
+          ],
           "highlight": [],
-          "sortable": false,
+          "sortable": true,
           "header": true,
           "paging": true,
-          "field_list": true,
+          "field_list": false,
           "trimFactor": 300,
           "normTimes": true,
           "spyable": true,
@@ -266,13 +269,12 @@
           "displayLinkIcon": true,
           "imageFields": [],
           "imgFieldWidth": "auto",
-          "imgFieldHeight": "85px",
-          "title": "Table panel"
+          "imgFieldHeight": "85px"
         }
       ]
-    }    
+    }
   ],
-  "editable": true,
+  "editable": false,
   "index": {
     "interval": "none",
     "pattern": "[logstash-]YYYY.MM.DD",
@@ -289,7 +291,7 @@
     "save_temp": true,
     "save_temp_ttl_enable": true,
     "save_temp_ttl": "30d",
-    "load_gist": true,
+    "load_gist": false,
     "load_elasticsearch": true,
     "load_elasticsearch_size": 20,
     "load_local": true,
@@ -299,7 +301,10 @@
   "solr": {
     "server": "/solr/",
     "core_name": "data",
-    "core_list": [],
+    "core_list": [
+      "dashboard",
+      "data"
+    ],
     "global_params": "&df=message"
   }
 }
