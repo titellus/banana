@@ -52,7 +52,7 @@
                 <goals>
                   <goal>exec</goal>
                 </goals>
-                <phase>prepare-package</phase>
+                <phase>compile</phase>
                 <configuration>
                   <executable>${project.basedir}/node/node</executable>
                   <arguments>
