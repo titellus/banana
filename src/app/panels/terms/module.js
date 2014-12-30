@@ -53,8 +53,8 @@ function (angular, app, _, $, kbn) {
       stats_field : '',
       decimal_points : 0, // The number of digits after the decimal point
       exclude : [],
-      missing : true,
-      other   : true,
+      missing : false,
+      other   : false,
       size    : 10,
       // order   : 'count',
       order   : 'descending',
@@ -195,17 +195,15 @@ function (angular, app, _, $, kbn) {
               i++;
               var count = v[i];
               sum += count;
-
-              // if count = 0, do not add it to the chart, just skip it
-              if (count === 0) { continue; }
-              var slice = {
-                label: (term || 'No value'),
-                meta: (term ? '' : 'missing'),
-                data: [[k,count]],
-                actions: true
-              };
-              slice = addSliceColor(slice,term);
-              $scope.data.push(slice);
+              if(term === null){
+                missing = count;
+              }else{
+                // if count = 0, do not add it to the chart, just skip it
+                if (count === 0) { continue; }
+                var slice = { label : term, data : [[k,count]], actions: true};
+                slice = addSliceColor(slice,term);
+                $scope.data.push(slice);
+              }
             }
           });
         } else {
