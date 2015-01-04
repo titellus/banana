@@ -50,7 +50,9 @@ define([
             show_queries: true,
             interpolate: 'basis',
             right_interpolate: 'basis',
-            rightYEnabled: false
+            rightYEnabled: false,
+            showLegend: true,
+            showRightLegend: true
         };
 
         _.defaults($scope.panel, _d);
@@ -85,7 +87,7 @@ define([
             var rows_limit = '&rows=' + $scope.panel.max_rows;
             var sort = '&sort=' + $scope.panel.field + ' asc';
 
-            $scope.panel.queries.query = querySrv.getQuery(0) + fq + fl + wt_json + rows_limit + sort;
+            $scope.panel.queries.query = querySrv.getORquery() + fq + fl + wt_json + rows_limit + sort;
 
             // Set the additional custom query
             if ($scope.panel.queries.custom != null) {
@@ -162,18 +164,21 @@ define([
 
                     var parent_width = $("#multiseries").width(),
                         aspectRatio = 400 / 600;
+
                     var margin = {
                             top: 20,
                             right: 80,
                             bottom: 30,
                             left: 50
                         },
-                        width = parent_width - margin.left - margin.right,
+                        width = parent_width - margin.left - margin.right - 50,
                         height = (parent_width * aspectRatio) - margin.top - margin.bottom;
+
                     // The need for two date parsers is that sometimes solr removes the .%L part if it equals 000
                     // So double checking to make proper parsing format and cause no error
                     var parseDate = d3.time.format.utc("%Y-%m-%dT%H:%M:%S.%LZ");
                     var parseDate2 = d3.time.format.utc("%Y-%m-%dT%H:%M:%SZ");
+
                     var isDate = false;
                     // Check if x is date or another type
                     if (data && data.length > 0) {
@@ -188,10 +193,13 @@ define([
                     } else {
                         x = d3.scale.linear().range([0, width]);
                     }
+
                     var y = d3.scale.linear().range([height, 0]);
+
                     var color = d3.scale.category10();
                     var xAxis = d3.svg.axis().scale(x).orient("bottom");
                     var yAxis = d3.svg.axis().scale(y).orient("left");
+
                     var line = d3.svg.line()
                         .interpolate(scope.panel.interpolate) // interpolate option
                         .x(function(d) {
@@ -200,23 +208,18 @@ define([
                         .y(function(d) {
                             return y(d.yValue);
                         });
-                    var svg = d3.select(el).append("svg")
-                        .attr("width", width + margin.left + margin.right)
-                        .attr("height", height + margin.top + margin.bottom)
-                        .attr("viewBox", "0 0 " + parent_width + " " + (parent_width * aspectRatio))
-                        .attr("preserveAspectRatio", "xMidYMid")
-                        .append("g")
-                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
                     // Colors domain must be the same count of fl
                     var fl = scope.panel.fl.split(',');
                     color.domain(d3.keys(data[0]).filter(function(key) {
                         return (fl.indexOf(key) !== -1);
                     }));
 
-                    var y_right, y_right_color, yAxis_right, line_right, rightAxisList;
+                    var y_right,y_right_color,yAxis_right,line_right,rightAxisList;
+
                     if(scope.panel.rightYEnabled) {
                         y_right = d3.scale.linear().range([height, 0]);
-                        y_right_color = d3.scale.category20();
+                        y_right_color = d3.scale.category20b();
                         yAxis_right = d3.svg.axis().scale(y_right).orient("right");
                         line_right = d3.svg.line()
                                     .interpolate(scope.panel.right_interpolate)
@@ -227,6 +230,7 @@ define([
                            return (rightAxisList.indexOf(key) !== -1);
                         }));
                     }
+
                     if (isDate) {
                         // That in case x-axis was date, what if not?
                         data.forEach(function(d) {
@@ -234,6 +238,7 @@ define([
                             d[scope.panel.field] = newDate !== null ? newDate : parseDate2.parse(String(d[scope.panel.field]));
                         });
                     }
+
                     var yFields = color.domain().map(function(name) {
                         return {
                             name: name,
@@ -245,6 +250,7 @@ define([
                             })
                         };
                     });
+
                     // remove NaN values and let d3 to perform the interpolation
                     yFields.forEach(function(c) {
                         c.values = c.values.filter(function(d) {
@@ -269,21 +275,6 @@ define([
                         })
                     ]);
 
-                    svg.append("g")
-                        .attr("class", "x axis")
-                        .attr("transform", "translate(0," + height + ")")
-                        .call(xAxis);
-
-                    svg.append("g")
-                        .attr("class", "y axis")
-                        .call(yAxis)
-                        .append("text")
-                        .attr("transform", "rotate(-90)")
-                        .attr("y", 6)
-                        .attr("dy", ".71em")
-                        .style("text-anchor", "end")
-                        .text(scope.panel.yAxis);
-
                     var yFields_right;
                     if(scope.panel.rightYEnabled) {
                         yFields_right = y_right_color.domain().map(function(name) {
@@ -299,19 +290,37 @@ define([
                             d3.min(yFields_right, function(c) { return d3.min(c.values, function(v) { return v.yValue; }); }),
                             d3.max(yFields_right, function(c) { return d3.max(c.values, function(v) { return v.yValue; }); })
                         ]);
-
-                        svg.append("g")
-                           .attr("class", "y axis")
-                           .attr("transform", "translate(" + width + " ,0)")   
-                           .style("fill", "blue") 
-                           .call(yAxis_right)
-                           .append("text")
-                           .attr("transform", "rotate(-90)")
-                           .attr("y", 6)
-                           .attr("dy", "-1.2em")
-                           .style("text-anchor", "end")
-                           .text(scope.panel.right_yAxis); // TODO: make it defined in panel
                     }
+
+                    // zoom functionality is disabled
+                    var zoom = d3.behavior.zoom()
+                                .x(x)
+                                .y(y)
+                                .scaleExtent([1, 5])
+                                .on("zoom", zoomed);                               
+
+                    var svg = d3.select(el).append("svg")
+                        .attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .attr("viewBox", "0 0 " + parent_width + " " + (parent_width * aspectRatio))
+                        .attr("preserveAspectRatio", "xMidYMid")
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                        
+                    svg.append("g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(xAxis);
+
+                    svg.append("g")
+                        .attr("class", "y axis")
+                        .call(yAxis)
+                        .append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 6)
+                        .attr("dy", ".71em")
+                        .style("text-anchor", "end")
+                        .text(scope.panel.yAxis);
 
                     var yfield = svg.selectAll(".yfield")
                         .data(yFields)
@@ -328,39 +337,104 @@ define([
                         })
                         .style("fill", "transparent");
 
-                    yfield.append("text")
-                        .datum(function(d) {
-                            return {
-                                name: d.name,
-                                value: d.values[d.values.length - 1]
-                            };
-                        })
-                        .attr("transform", function(d) {
-                            return "translate(" + x(d.value.xValue) + "," + y(d.value.yValue) + ")";
-                        })
-                        .attr("x", 3)
-                        .attr("dy", ".35em")
-                        .text(function(d) {
-                            return d.name;
-                        });
-
                     var yfield_right;
                     if(scope.panel.rightYEnabled) {
-                       yfield_right = svg.selectAll(".yfield_right")
+                        svg.append("g")
+                           .attr("class", "y axis")
+                           .attr("transform", "translate(" + width + " ,0)")   
+                           .style("fill", "blue") 
+                           .call(yAxis_right)
+                           .append("text")
+                           .attr("transform", "rotate(-90)")
+                           .attr("y", 6)
+                           .attr("dy", "-1.2em")
+                           .style("text-anchor", "end")
+                           .text(scope.panel.right_yAxis); // TODO: make it defined in panel
+
+                        yfield_right = svg.selectAll(".yfield_right")
                                      .data(yFields_right)
                                      .enter().append("g")
                                      .attr("class", "yfield_right");
-                       yfield_right.append("path")
+                       
+                        yfield_right.append("path")
                            .attr("class", "line")
                            .attr("d", function(d) { return line_right(d.values); })
-                           .style("stroke", function(d) { return y_right_color(d.name + 10); })
+                           .style("stroke", function(d) { return y_right_color(d.name); })
                            .style("fill", "transparent")
-                       yfield_right.append("text")
-                           .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-                           .attr("transform", function(d) { return "translate(" + x(d.value.xValue) + "," + y(d.value.yValue) + ")"; })
-                           .attr("x", 3)
-                           .attr("dy", ".35em")
-                           .text(function(d) { return d.name; });
+                    }
+
+                    if(scope.panel.showLegend) {
+                        var legend = svg.append("g")
+                            .attr("class", "legend")
+                            .attr("height", 100)
+                            .attr("width", 150)
+                            .attr('transform', 'translate(30,40)');
+                            
+                            legend.selectAll('rect')
+                              .data(yFields)
+                              .enter()
+                              .append("rect")
+                              .attr("x", width + 50)
+                              .attr("y", function(d, i){ return i *  20;})
+                              .attr("width", 10)
+                              .attr("height", 10)
+                              .style("fill", function(d) { 
+                                return color(d.name);
+                              })
+                              
+                            legend.selectAll('text')
+                              .data(yFields)
+                              .enter()
+                              .append("text")
+                              .attr("x", width + 65)
+                              .attr("y", function(d, i){ return i *  20 + 9;})
+                              .text(function(d) {
+                                return d.name;
+                              });
+                      }
+
+                    // Another Legend
+                    if(scope.panel.rightYEnabled && scope.panel.showRightLegend) {
+                        var legend_right = svg.append("g")
+                        .attr("class", "legend")
+                        .attr("height", 100)
+                        .attr("width", 150)
+                        .attr('transform', 'translate(30,150)')
+                        
+                        legend_right.selectAll('rect')
+                          .data(yFields_right)
+                          .enter()
+                          .append("rect")
+                          .attr("x", width + 50)
+                          .attr("y", function(d, i){ return i *  20;})
+                          .attr("width", 10)
+                          .attr("height", 10)
+                          .style("fill", function(d) { 
+                            return y_right_color(d.name);
+                          })
+                          
+                        legend_right.selectAll('text')
+                          .data(yFields_right)
+                          .enter()
+                          .append("text")
+                          .attr("x", width + 65)
+                          .attr("y", function(d, i){ return i *  20 + 9;})
+                          .text(function(d) {
+                            return d.name;
+                          });
+                    }
+
+                    function zoomed() {
+                        svg.select(".x.axis").call(xAxis);
+                        svg.select(".y.axis").call(yAxis);   
+                        svg.selectAll('.yfield path.line').data(yFields).attr('d', function(d) {
+                            return line(d.values);
+                        });
+                        if(scope.panel.rightYEnabled) {
+                            svg.selectAll('.yfield_right path.line').data(yFields_right).attr('d', function(d) {
+                                return line_right(d.values);
+                            });
+                        }
                     }
                 }
 
