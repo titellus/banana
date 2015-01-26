@@ -186,6 +186,7 @@ function (angular, app, _, $, kbn) {
 
         var sum = 0;
         var k = 0;
+        var missing =0;
         $scope.panelMeta.loading = false;
         $scope.hits = results.response.numFound;
         $scope.data = [];
