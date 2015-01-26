@@ -33,6 +33,7 @@ function (Settings) {
      */
     solr: "/solr/",
     solr_core: "data",
+    timefield: 'event_timestamp',
 
     /**
      * The default Solr index to use for storing objects internal to Banana, such as 
