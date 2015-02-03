@@ -1,5 +1,5 @@
 {
-  "title": "Statistics (with record details)",
+  "title": "Statistics",
   "services": {
     "query": {
       "idQueue": [
@@ -656,88 +656,7 @@
       "editable": true,
       "collapse": false,
       "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 9,
-          "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "table",
-          "size": 10,
-          "pages": 500,
-          "offset": 0,
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "resourceTitle",
-            "overviewUrl"
-          ],
-          "highlight": [],
-          "sortable": false,
-          "header": true,
-          "paging": true,
-          "spyable": true,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:metadata&&wt=json&rows=50",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&"
-          },
-          "field_list": true,
-          "status": "Stable",
-          "trimFactor": 300,
-          "normTimes": true,
-          "title": "Records found",
-          "saveOption": "json",
-          "exportSize": 50,
-          "exportAll": true,
-          "displayLinkIcon": true,
-          "imageFields": [
-            "overviewUrl"
-          ],
-          "imgFieldWidth": "auto",
-          "imgFieldHeight": "85px",
-          "sort": [
-            "event_timestamp",
-            "desc"
-          ],
-          "important_fields": [
-            "dateStamp",
-            "documentType",
-            "harvestedDate",
-            "harvesterId",
-            "id",
-            "inspireAnnex",
-            "inspireConformResource",
-            "inspireServiceType",
-            "inspireTheme",
-            "inspireTheme_syn",
-            "mainLanguage",
-            "mdContact",
-            "metadataIdentifier",
-            "otherLanguage",
-            "record",
-            "recordOperateOn",
-            "recordOperatedBy",
-            "recordOperatedByType",
-            "relatedTo",
-            "resourceTitle",
-            "resourceType",
-            "serviceType",
-            "territory",
-            "resourceAbstract",
-            "keyword",
-            "overviewUrl"
-          ],
-          "enableImageField": true
-        },
-        {
+      "panels": [{
           "error": false,
           "span": 3,
           "editable": true,
@@ -806,7 +725,7 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "/solr/",
+    "server": "${webapp.context}",
     "core_name": "data",
     "core_list": [
       "dashboard",

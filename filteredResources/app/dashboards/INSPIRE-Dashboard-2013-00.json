@@ -561,7 +561,7 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "/solr/",
+    "server": "${webapp.context}",
     "core_name": "data",
     "core_list": [
       "dashboard",

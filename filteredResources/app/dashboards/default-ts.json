@@ -297,7 +297,7 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "/",
+    "server": "${webapp.context}",
     "core_name": "data",
     "core_list": [],
     "global_params": ""

@@ -6,6 +6,12 @@
   <name>Dashboard</name>
   <version>0.1</version>
 
+  <parent>
+    <groupId>org.daobs</groupId>
+    <artifactId>daobs</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
   <profiles>
     <profile>
       <id>production</id>
@@ -75,8 +81,23 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>2.6</version>
         <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/src</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/filteredResources</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
           <execution>
             <id>copy-dashboard-app</id>
             <phase>prepare-package</phase>
