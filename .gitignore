@@ -5,5 +5,5 @@ target
 build*
 bower_components
 *.iml
-src/app/dashboards/CATALOG
-src/app/dashboards/INSPIRE
+src/app/dashboards/CATALOG*
+src/app/dashboards/INSPIRE*
