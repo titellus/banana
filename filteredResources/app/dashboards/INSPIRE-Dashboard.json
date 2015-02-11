@@ -289,7 +289,7 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "${webapp.context}",
+    "server": "${webapp.rootUrl}",
     "core_name": "data",
     "core_list": [
       "dashboard",

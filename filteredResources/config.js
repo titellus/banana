@@ -31,7 +31,7 @@ function (Settings) {
      * your banana web application.
      * @type {String}
      */
-    solr: "${webapp.context}",
+    solr: "${webapp.rootUrl}",
     solr_core: "data",
     timefield: 'event_timestamp',
 
