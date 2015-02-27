@@ -61,7 +61,8 @@
         "missing": false,
         "other": false,
         "size": 10,
-        "order": "descending",
+        "order": "ascending",
+        "sortBy": "index",
         "style": {
           "font-size": "10pt"
         },
@@ -175,7 +176,8 @@
           "missing": false,
           "other": false,
           "size": 10,
-          "order": "descending",
+          "order": "ascending",
+          "sortBy": "index",
           "style": {
             "font-size": "10pt"
           },
@@ -278,7 +280,8 @@
           "missing": false,
           "other": false,
           "size": 10,
-          "order": "descending",
+          "order": "ascending",
+          "sortBy": "index",
           "style": {
             "font-size": "10pt"
           },

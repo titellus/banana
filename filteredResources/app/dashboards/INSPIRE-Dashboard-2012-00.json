@@ -62,7 +62,8 @@
           "missing": false,
           "other": false,
           "size": 30,
-          "order": "descending",
+          "order": "ascending",
+          "sortBy": "index",
           "style": {
             "font-size": "10pt"
           },

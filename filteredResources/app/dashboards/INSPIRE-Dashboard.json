@@ -58,7 +58,7 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This dashboard provides access to the reporting available and allows to navigate and search the indicator values.\n\n* [Reporting 2014 - Ref. year 2013](#/dashboard/solr/INSPIRE%20Reporting%202014%20-%20Ref.%20year%202013%20-%20Metadata%20availability%20and%20conformity)\n\n* [Reporting 2013 - Ref. year 2012](#/dashboard/solr/INSPIRE%20Reporting%202013%20-%20Ref.%20year%202012%20-%20Metadata%20availability%20and%20conformity)",
+          "content": "This dashboard provides access to the reporting available and allows to navigate and search the indicator values.\n\n* [Monitoring 2014 - Ref. year 2013](#/dashboard/solr/INSPIRE%20Reporting%202014%20-%20Ref.%20year%202013%20-%20Metadata%20availability%20and%20conformity)\n\n* [Monitoring 2013 - Ref. year 2012](#/dashboard/solr/INSPIRE%20Reporting%202013%20-%20Ref.%20year%202012%20-%20Metadata%20availability%20and%20conformity)",
           "style": {}
         },
         {
@@ -90,7 +90,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:indicator&&wt=json&rows=0",
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -117,24 +117,23 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 8,
           "editable": true,
           "group": [
             "default"
           ],
           "type": "table",
-          "size": 14,
-          "pages": 500,
+          "size": 40,
+          "pages": 125,
           "offset": 0,
           "style": {
             "font-size": "9pt"
           },
           "overflow": "min-height",
           "fields": [
-            "indicatorName",
             "territory",
             "indicatorType",
+            "indicatorName",
             "indicatorValue",
             "reportingYear"
           ],
@@ -148,8 +147,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:indicator&&sort=reportingYear desc&wt=json&rows=7000",
-            "basic_query": "q=*%3A*&fq=documentType:indicator&&sort=reportingYear desc"
+            "query": "q=*%3A*&fq=documentType:indicator&sort=reportingYear desc&wt=json&rows=5000",
+            "basic_query": "q=*%3A*&fq=documentType:indicator&sort=reportingYear desc"
           },
           "field_list": false,
           "status": "Stable",
@@ -157,7 +156,7 @@
           "normTimes": true,
           "title": "List of indicators reported",
           "saveOption": "json",
-          "exportSize": 7000,
+          "exportSize": 5000,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
@@ -181,7 +180,6 @@
           "show_queries": true
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "facet",
@@ -192,8 +190,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:indicator&&facet=true&facet.field=indicatorType&facet.field=territory&facet.field=reportingYear&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:indicator&&facet=true&facet.field=indicatorType&facet.field=territory&facet.field=reportingYear",
+            "query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName&facet.field=indicatorType&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName&facet.field=indicatorType",
             "custom": ""
           },
           "group": "default",
@@ -202,16 +200,17 @@
           },
           "overflow": "min-height",
           "fields": [
-            "indicatorType",
             "territory",
-            "reportingYear"
+            "reportingYear",
+            "indicatorName",
+            "indicatorType"
           ],
           "field_list": true,
           "spyable": true,
-          "facet_limit": 30,
+          "facet_limit": 50,
           "foundResults": true,
           "header_title": "",
-          "toggle_element": "indicatorType",
+          "toggle_element": "indicatorName",
           "show_queries": true,
           "title": "Narrow your search",
           "offset": 0,
@@ -235,7 +234,6 @@
           "spyable": true
         },
         {
-          "error": false,
           "span": 8,
           "editable": true,
           "type": "scatterplot",
@@ -245,7 +243,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:indicator&&fl=reportingYear,indicatorValue,territory&wt=csv&rows=1000",
+            "query": "q=*%3A*&fq=documentType:indicator&fl=reportingYear,indicatorValue,territory&wt=csv&rows=1000",
             "custom": "&fq=indicatorName:\"dsv_num\""
           },
           "max_rows": 1000,
