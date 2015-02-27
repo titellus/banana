@@ -69,7 +69,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&&wt=json&rows=0",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -83,7 +83,8 @@
           "tilt": false,
           "labels": true,
           "spyable": true,
-          "title": "Total Hits"
+          "title": "Total Hits",
+          "show_queries": true
         }
       ]
     },
@@ -105,7 +106,6 @@
           "type": "filtering"
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -115,7 +115,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireAnnex&facet.limit=10",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -197,7 +197,8 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Number of records per annex"
+          "title": "Number of records per annex",
+          "show_queries": true
         }
       ]
     },
@@ -209,7 +210,6 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 12,
           "editable": true,
           "type": "terms",
@@ -219,7 +219,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireTheme&facet.limit=35",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireTheme&facet.limit=35&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -301,7 +301,8 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Number of record per themes"
+          "title": "Number of record per themes",
+          "show_queries": true
         }
       ]
     },
@@ -313,7 +314,6 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -323,7 +323,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=resourceType&facet.limit=10",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resourceType&facet.limit=10&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -357,10 +357,10 @@
             "#447EBC",
             "#C15C17"
           ],
-          "title": "Type of resources"
+          "title": "Type of resources",
+          "show_queries": true
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -370,7 +370,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=inspireServiceType&facet.limit=10",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireServiceType&facet.limit=10&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -401,10 +401,10 @@
             "#294358",
             "#080b0d"
           ],
-          "title": "Type of services"
+          "title": "Type of services",
+          "show_queries": true
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -414,7 +414,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=spatialRepresentationType&facet.limit=10",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=spatialRepresentationType&facet.limit=10&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -447,7 +447,8 @@
             "#f3730c",
             "#f4c59f"
           ],
-          "title": "Type of datasets"
+          "title": "Type of datasets",
+          "show_queries": true
         }
       ]
     },
@@ -459,7 +460,6 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -469,7 +469,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -551,10 +551,10 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Spatial resolution"
+          "title": "Spatial resolution",
+          "show_queries": true
         },
         {
-          "error": false,
           "span": 8,
           "editable": true,
           "type": "terms",
@@ -564,7 +564,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&&facet=true&facet.field=coordinateSystem&facet.limit=40",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=coordinateSystem&facet.limit=40&facet.missing=false",
             "custom": ""
           },
           "mode": "count",
@@ -646,7 +646,8 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Coordinate system used"
+          "title": "Coordinate system used",
+          "show_queries": true
         }
       ]
     },
@@ -656,8 +657,8 @@
       "editable": true,
       "collapse": false,
       "collapsable": true,
-      "panels": [{
-          "error": false,
+      "panels": [
+        {
           "span": 3,
           "editable": true,
           "type": "facet",
@@ -668,8 +669,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource",
+            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=publicationYearForResource&facet.field=inspireAnnex&facet.field=inspireTheme&facet.field=resolutionScaleDenominator&facet.field=spatialRepresentationType&facet.field=resourceType&facet.field=pointOfContactOrgForResource",
             "custom": ""
           },
           "group": "default",
@@ -695,7 +696,92 @@
           "toggle_element": null,
           "title": "Narrow your search",
           "offset": 0,
-          "exportSize": null
+          "exportSize": null,
+          "show_queries": true
+        },
+        {
+          "span": 9,
+          "editable": true,
+          "type": "heatmap",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=inspireTheme,inspireServiceType&facet.limit=300&facet.pivot.mincount=0",
+            "custom": ""
+          },
+          "size": 0,
+          "row_field": "inspireTheme",
+          "col_field": "inspireServiceType",
+          "row_size": 300,
+          "editor_size": 300,
+          "color": "blue",
+          "spyable": true,
+          "transpose_show": true,
+          "transposed": true,
+          "show_queries": true,
+          "title": "Service type per INSPIRE themes"
+        }
+      ]
+    },
+    {
+      "title": "HeatMap",
+      "height": "350px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 6,
+          "editable": true,
+          "type": "heatmap",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,serviceType&facet.limit=300&facet.pivot.mincount=0",
+            "custom": ""
+          },
+          "size": 0,
+          "row_field": "territory",
+          "col_field": "serviceType",
+          "row_size": 300,
+          "editor_size": 300,
+          "color": "gray",
+          "spyable": true,
+          "transpose_show": true,
+          "transposed": true,
+          "show_queries": true,
+          "title": "Service type per territory"
+        },
+        {
+          "span": 6,
+          "editable": true,
+          "type": "heatmap",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,resourceType&facet.limit=300&facet.pivot.mincount=0",
+            "custom": ""
+          },
+          "size": 0,
+          "row_field": "territory",
+          "col_field": "resourceType",
+          "row_size": 300,
+          "editor_size": 300,
+          "color": "gray",
+          "spyable": true,
+          "transpose_show": true,
+          "transposed": true,
+          "show_queries": true,
+          "title": "Resource type per territory"
         }
       ]
     }

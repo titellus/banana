@@ -42,7 +42,7 @@
       "panels": [
         {
           "error": false,
-          "span": 9,
+          "span": 4,
           "editable": true,
           "group": [
             "default"
@@ -60,7 +60,7 @@
           "def_type": ""
         },
         {
-          "span": 3,
+          "span": 4,
           "editable": true,
           "type": "hits",
           "loadingEditor": false,
@@ -69,7 +69,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -85,6 +85,17 @@
           "spyable": true,
           "title": "Total Hits",
           "show_queries": true
+        },
+        {
+          "error": false,
+          "span": 4,
+          "editable": true,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "markdown",
+          "content": "Report information about metadata validation status. Two types of validation are reported:\n\n* XML Schema validation\n\n* INSPIRE online validation tool results\n\n* INSPIRE online validation completeness indicator",
+          "style": {}
         }
       ]
     },
@@ -115,7 +126,6 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -211,7 +221,6 @@
           "title": "XML Schema Validation report"
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "terms",
@@ -307,15 +316,133 @@
           "title": "INSPIRE validation report"
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
-          "type": "text",
+          "type": "terms",
           "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "Report information about metadata validation status. Two types of validation are reported:\n\n* XML Schema validation\n\n* INSPIRE online validation tool",
-          "style": {}
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "isAboveThreshold",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Is above 75% for completeness indicator"
+        }
+      ]
+    },
+    {
+      "title": "Validation details",
+      "height": "350px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 12,
+          "editable": true,
+          "type": "heatmap",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
+            "custom": ""
+          },
+          "size": 0,
+          "row_field": "territory",
+          "col_field": "completenessIndicator",
+          "row_size": 30,
+          "editor_size": 30,
+          "color": "blue",
+          "spyable": true,
+          "transpose_show": true,
+          "transposed": false,
+          "show_queries": true,
+          "title": "Completeness indicator - experimental"
         }
       ]
     },
@@ -327,7 +454,6 @@
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 8,
           "editable": true,
           "group": [
@@ -335,14 +461,17 @@
           ],
           "type": "table",
           "size": 10,
-          "pages": 5,
+          "pages": 50,
           "offset": 0,
           "style": {
             "font-size": "9pt"
           },
           "overflow": "min-height",
           "fields": [
-            "resourceTitle"
+            "resourceTitle",
+            "isSchemaValid",
+            "isValid",
+            "completenessIndicator"
           ],
           "highlight": [],
           "sortable": false,
@@ -354,16 +483,16 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=50",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=500",
             "basic_query": "q=*%3A*&fq=documentType:metadata"
           },
-          "field_list": true,
+          "field_list": false,
           "status": "Stable",
           "trimFactor": 300,
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 500,
+          "exportSize": 50,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
@@ -374,12 +503,14 @@
             "desc"
           ],
           "important_fields": [
-            "resourceTitle"
+            "resourceTitle",
+            "completenessIndicator",
+            "isValid",
+            "isSchemaValid"
           ],
           "show_queries": true
         },
         {
-          "error": false,
           "span": 4,
           "editable": true,
           "type": "facet",
@@ -390,8 +521,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory",
+            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
             "custom": ""
           },
           "group": "default",
@@ -400,7 +531,9 @@
           },
           "overflow": "min-height",
           "fields": [
-            "territory"
+            "territory",
+            "isValid",
+            "isSchemaValid"
           ],
           "field_list": true,
           "spyable": true,
