@@ -3,7 +3,7 @@
   <select class="collection-picker-select" ng-model="dashboard.current.solr.core_name" ng-change="dashboard.refresh()" ng-options="c as c for c in dashboard.current.solr.core_list"></select>
 </li>
 
-<li><a bs-tooltip="'Goto saved default'" data-placement="bottom" container="body" href="#/dashboard"><i class="fa fa-home"></i></a></li>
+<li><a bs-tooltip="'Home page'" data-placement="bottom" href='../'><i class='icon-home'></i></a></li>
 <li><a class="link" bs-modal="solrSettingsModal" data-content-template="app/partials/solrSettings.html" ng-click="$scope.type='default-ts';" ><i class="fa fa-clock-o"></i></a></li>
 <li><a class="link" bs-modal="solrSettingsModal" data-content-template="app/partials/solrSettings.html" ng-click="$scope.type='default-nts';"><i class="fa fa-th-large"></i> </a></li>
 <!-- New menu -->

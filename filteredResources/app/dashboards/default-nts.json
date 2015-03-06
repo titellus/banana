@@ -181,7 +181,7 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "/",
+    "server": "${webapp.rootUrl}",
     "core_name": "data",
     "core_list": [],
     "global_params": ""
