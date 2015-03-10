@@ -84,7 +84,8 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true
+          "show_queries": true,
+          "mode": "count"
         },
         {
           "error": false,
@@ -135,7 +136,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true&f.isSchemaValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -218,7 +219,27 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "XML Schema Validation report"
+          "title": "XML Schema Validation report",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#7EB26D"
+            },
+            {
+              "label": "false",
+              "color": "#e23737"
+            },
+            {
+              "label": "Missing field",
+              "color": "#b1b1b1"
+            },
+            {
+              "label": "Other values",
+              "color": "#b1b1b1"
+            }
+          ]
         },
         {
           "span": 4,
@@ -230,7 +251,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true&f.isValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -313,7 +334,27 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "INSPIRE validation report"
+          "title": "INSPIRE validation report",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "false",
+              "color": "#7EB26D"
+            },
+            {
+              "label": "true",
+              "color": "#e23737"
+            },
+            {
+              "label": "Missing field",
+              "color": "#b1b1b1"
+            },
+            {
+              "label": "Other values",
+              "color": "#b1b1b1"
+            }
+          ]
         },
         {
           "span": 4,
@@ -325,7 +366,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=true&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -408,7 +449,27 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Is above 75% for completeness indicator"
+          "title": "Is above 75% for completeness indicator",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#7EB26D"
+            },
+            {
+              "label": "false",
+              "color": "#e23737"
+            },
+            {
+              "label": "Missing field",
+              "color": "#b1b1b1"
+            },
+            {
+              "label": "Other values",
+              "color": "#b1b1b1"
+            }
+          ]
         }
       ]
     },
@@ -492,7 +553,7 @@
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 50,
+          "exportSize": 500,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
@@ -508,7 +569,22 @@
             "isValid",
             "isSchemaValid"
           ],
-          "show_queries": true
+          "show_queries": true,
+          "couchbase": {
+            "bucket": "",
+            "document": "",
+            "view": ""
+          },
+          "overflowItems": [
+            {
+              "key": "scroll",
+              "value": "height"
+            },
+            {
+              "key": "expand",
+              "value": "min-height"
+            }
+          ]
         },
         {
           "span": 4,
