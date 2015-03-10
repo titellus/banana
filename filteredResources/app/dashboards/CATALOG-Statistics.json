@@ -84,7 +84,8 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true
+          "show_queries": true,
+          "mode": "count"
         }
       ]
     },
@@ -115,7 +116,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=true&f.inspireAnnex.facet.sort=index",
             "custom": ""
           },
           "mode": "count",
@@ -126,7 +127,7 @@
           "missing": false,
           "other": false,
           "size": 10,
-          "order": "descending",
+          "order": "ascending",
           "style": {
             "font-size": "10pt"
           },
@@ -136,110 +137,6 @@
           "logAxis": false,
           "arrangement": "horizontal",
           "chart": "pie",
-          "counter_pos": "above",
-          "lastColor": "",
-          "spyable": true,
-          "chartColors": [
-            "#7EB26D",
-            "#EAB839",
-            "#6ED0E0",
-            "#EF843C",
-            "#E24D42",
-            "#1F78C1",
-            "#BA43A9",
-            "#705DA0",
-            "#508642",
-            "#CCA300",
-            "#447EBC",
-            "#C15C17",
-            "#890F02",
-            "#0A437C",
-            "#6D1F62",
-            "#584477",
-            "#B7DBAB",
-            "#F4D598",
-            "#70DBED",
-            "#F9BA8F",
-            "#F29191",
-            "#82B5D8",
-            "#E5A8E2",
-            "#AEA2E0",
-            "#629E51",
-            "#E5AC0E",
-            "#64B0C8",
-            "#E0752D",
-            "#BF1B00",
-            "#0A50A1",
-            "#962D82",
-            "#614D93",
-            "#9AC48A",
-            "#F2C96D",
-            "#65C5DB",
-            "#F9934E",
-            "#EA6460",
-            "#5195CE",
-            "#D683CE",
-            "#806EB7",
-            "#3F6833",
-            "#967302",
-            "#2F575E",
-            "#99440A",
-            "#58140C",
-            "#052B51",
-            "#511749",
-            "#3F2B5B",
-            "#E0F9D7",
-            "#FCEACA",
-            "#CFFAFF",
-            "#F9E2D2",
-            "#FCE2DE",
-            "#BADFF4",
-            "#F9D9F9",
-            "#DEDAF7"
-          ],
-          "title": "Number of records per annex",
-          "show_queries": true
-        }
-      ]
-    },
-    {
-      "title": "INSPIRE statistics",
-      "height": "700px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 12,
-          "editable": true,
-          "type": "terms",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireTheme&facet.limit=35&facet.missing=false",
-            "custom": ""
-          },
-          "mode": "count",
-          "field": "inspireTheme",
-          "stats_field": "",
-          "decimal_points": 0,
-          "exclude": [],
-          "missing": false,
-          "other": false,
-          "size": 35,
-          "order": "descending",
-          "style": {
-            "font-size": "10pt"
-          },
-          "donut": false,
-          "tilt": false,
-          "labels": true,
-          "logAxis": false,
-          "arrangement": "vertical",
-          "chart": "bar",
           "counter_pos": "right",
           "lastColor": "",
           "spyable": true,
@@ -301,8 +198,60 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
+          "title": "Number of records per annex",
+          "show_queries": true,
+          "sortBy": "index",
+          "colorMode": "list",
+          "chartColorPalette": []
+        }
+      ]
+    },
+    {
+      "title": "INSPIRE statistics",
+      "height": "700px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 12,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireTheme&facet.limit=35&facet.missing=true&f.inspireTheme.facet.sort=index",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "inspireTheme",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 35,
+          "order": "ascending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "vertical",
+          "chart": "bar",
+          "counter_pos": "right",
+          "lastColor": "",
+          "spyable": true,
           "title": "Number of record per themes",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "index",
+          "colorMode": "list",
+          "chartColorPalette": []
         }
       ]
     },
@@ -323,7 +272,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resourceType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resourceType&facet.limit=10&facet.missing=true&f.resourceType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -358,7 +307,27 @@
             "#C15C17"
           ],
           "title": "Type of resources",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "service",
+              "color": "#1b9e77"
+            },
+            {
+              "label": "dataset",
+              "color": "#8e6b86"
+            },
+            {
+              "label": "Missing field",
+              "color": "#bebebe"
+            },
+            {
+              "label": "Other values",
+              "color": "#ffffff"
+            }
+          ]
         },
         {
           "span": 4,
@@ -370,7 +339,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireServiceType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireServiceType&facet.limit=10&facet.missing=true&f.inspireServiceType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -402,7 +371,31 @@
             "#080b0d"
           ],
           "title": "Type of services",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "view",
+              "color": "#00ff3b"
+            },
+            {
+              "label": "download",
+              "color": "#00f1de"
+            },
+            {
+              "label": "discovery",
+              "color": "#8aae3f"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aeaeae"
+            },
+            {
+              "label": "Other values",
+              "color": "#ffffff"
+            }
+          ]
         },
         {
           "span": 4,
@@ -414,7 +407,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=spatialRepresentationType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=spatialRepresentationType&facet.limit=10&facet.missing=true&f.spatialRepresentationType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -448,7 +441,27 @@
             "#f4c59f"
           ],
           "title": "Type of datasets",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "vector",
+              "color": "#824196"
+            },
+            {
+              "label": "grid",
+              "color": "#eb36f6"
+            },
+            {
+              "label": "Missing field",
+              "color": "#cdcdcd"
+            },
+            {
+              "label": "Other values",
+              "color": "#ffffff"
+            }
+          ]
         }
       ]
     },
@@ -469,7 +482,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10&facet.missing=true&f.resolutionScaleDenominator.facet.sort=index",
             "custom": ""
           },
           "mode": "count",
@@ -480,7 +493,7 @@
           "missing": false,
           "other": false,
           "size": 10,
-          "order": "descending",
+          "order": "ascending",
           "style": {
             "font-size": "10pt"
           },
@@ -494,65 +507,24 @@
           "lastColor": "",
           "spyable": true,
           "chartColors": [
-            "#7EB26D",
-            "#EAB839",
-            "#6ED0E0",
-            "#EF843C",
-            "#E24D42",
-            "#1F78C1",
-            "#BA43A9",
-            "#705DA0",
-            "#508642",
-            "#CCA300",
-            "#447EBC",
-            "#C15C17",
-            "#890F02",
-            "#0A437C",
-            "#6D1F62",
-            "#584477",
-            "#B7DBAB",
-            "#F4D598",
-            "#70DBED",
-            "#F9BA8F",
-            "#F29191",
-            "#82B5D8",
-            "#E5A8E2",
-            "#AEA2E0",
-            "#629E51",
-            "#E5AC0E",
-            "#64B0C8",
-            "#E0752D",
-            "#BF1B00",
-            "#0A50A1",
-            "#962D82",
-            "#614D93",
-            "#9AC48A",
-            "#F2C96D",
-            "#65C5DB",
-            "#F9934E",
-            "#EA6460",
-            "#5195CE",
-            "#D683CE",
-            "#806EB7",
-            "#3F6833",
-            "#967302",
-            "#2F575E",
-            "#99440A",
-            "#58140C",
-            "#052B51",
-            "#511749",
-            "#3F2B5B",
-            "#E0F9D7",
-            "#FCEACA",
-            "#CFFAFF",
-            "#F9E2D2",
-            "#FCE2DE",
-            "#BADFF4",
-            "#F9D9F9",
-            "#DEDAF7"
+            "\"#ffffe5\"",
+            "\"#f9fdc7\"",
+            "\"#edf8b1\"",
+            "\"#d9f0a3\"",
+            "\"#bbe395\"",
+            "\"#9bd587\"",
+            "\"#78c679\"",
+            "\"#53b466\"",
+            "\"#379e54\"",
+            "\"#238443\"",
+            "\"#0b713b\"",
+            "\"#005c32\""
           ],
           "title": "Spatial resolution",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "index",
+          "colorMode": "list",
+          "chartColorPalette": []
         },
         {
           "span": 8,
@@ -564,7 +536,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=coordinateSystem&facet.limit=40&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=coordinateSystem&facet.limit=40&facet.missing=true&f.coordinateSystem.facet.sort=index",
             "custom": ""
           },
           "mode": "count",
@@ -575,7 +547,7 @@
           "missing": false,
           "other": false,
           "size": 40,
-          "order": "descending",
+          "order": "ascending",
           "style": {
             "font-size": "10pt"
           },
@@ -647,7 +619,10 @@
             "#DEDAF7"
           ],
           "title": "Coordinate system used",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "index",
+          "colorMode": "list",
+          "chartColorPalette": []
         }
       ]
     },
