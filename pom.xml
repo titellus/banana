@@ -16,7 +16,7 @@
     <profile>
       <id>production</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <dashboard.web.dir>dist</dashboard.web.dir>
