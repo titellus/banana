@@ -70,13 +70,16 @@ function (angular, app, _, $, kbn) {
       spyable     : true,
       show_queries:true,
       error : '',
-      chartColors : querySrv.colors
+      colorMode: 'list',
+      chartColors : querySrv.colors,
+      chartColorPalette: null
     };
     _.defaults($scope.panel,_d);
 
     $scope.init = function () {
       $scope.hits = 0;
       //$scope.testMultivalued();
+      $scope.defaultColors = querySrv.colors;
       $scope.$on('refresh',function(){
         $scope.get_data();
       });
@@ -177,10 +180,18 @@ function (angular, app, _, $, kbn) {
           }
         };
 
-        // Function for customizing chart color by using field values as colors.
+        // Function for customizing chart color by using field values as colors
+        // or by using color palette
         var addSliceColor = function(slice,color) {
           if ($scope.panel.useColorFromField && isValidHTMLColor(color)) {
             slice.color = color;
+          } else if ($scope.panel.chartColorPalette &&
+                     $scope.panel.chartColorPalette.length > 0) {
+            _.each($scope.panel.chartColorPalette, function(v) {
+              if (v.label === slice.label && isValidHTMLColor(v.color)) {
+                slice.color = v.color;
+              }
+            });
           }
           return slice;
         };
@@ -470,7 +481,6 @@ function (angular, app, _, $, kbn) {
             $tooltip.remove();
           }
         });
-
       }
     };
   });

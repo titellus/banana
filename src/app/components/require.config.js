@@ -20,6 +20,7 @@ require.config({
     'angular-sanitize':       '../vendor/angular/angular-sanitize',
     timepicker:               '../vendor/angular/timepicker',
     datepicker:               '../vendor/angular/datepicker',
+    chroma:                   '../vendor/chroma/chroma',
 
     underscore:               'components/underscore.extended',
     'underscore-src':         '../vendor/underscore',
