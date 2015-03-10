@@ -16,7 +16,7 @@
     <profile>
       <id>production</id>
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
         <dashboard.web.dir>dist</dashboard.web.dir>
@@ -98,7 +98,7 @@
               </resources>
             </configuration>
           </execution>
-          <execution>
+          <!--<execution>
             <id>copy-dashboard-app</id>
             <phase>prepare-package</phase>
             <goals>
@@ -109,6 +109,25 @@
               <resources>
                 <resource>
                   <directory>${project.basedir}/${dashboard.web.dir}</directory>
+                  <targetPath>${project.build.directory}/web/dashboard</targetPath>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>-->
+          <!-- TODO: Remove once minified version works
+           See https://github.com/LucidWorks/banana/issues/151 -->
+          <execution>
+            <id>copy-dashboard-app2</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/web/dashboard</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src</directory>
                   <targetPath>${project.build.directory}/web/dashboard</targetPath>
                 </resource>
               </resources>

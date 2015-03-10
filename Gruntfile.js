@@ -285,8 +285,8 @@ module.exports = function (grunt) {
     'cssmin:build',
     'requirejs:build',
     'clean:temp',
-    'build:write_revision',
-    'uglify:dest'
+    'build:write_revision'
+    //'uglify:dest'
   ]);
 
   // run a string replacement on the require config, using the latest revision number as the cache buster
