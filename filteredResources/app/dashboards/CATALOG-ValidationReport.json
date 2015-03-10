@@ -553,7 +553,7 @@
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 500,
+          "exportSize": 50,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
