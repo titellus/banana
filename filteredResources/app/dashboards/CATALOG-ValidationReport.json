@@ -27,17 +27,7 @@
         1,
         2
       ],
-      "list": {
-        "0": {
-          "type": "terms",
-          "field": "territory",
-          "value": "NL",
-          "mandate": "must",
-          "active": true,
-          "alias": "",
-          "id": 0
-        }
-      },
+      "list": {},
       "ids": [
         0
       ]
