@@ -24,12 +24,23 @@
     },
     "filter": {
       "idQueue": [
-        0,
         1,
         2
       ],
-      "list": {},
-      "ids": []
+      "list": {
+        "0": {
+          "type": "terms",
+          "field": "territory",
+          "value": "NL",
+          "mandate": "must",
+          "active": true,
+          "alias": "",
+          "id": 0
+        }
+      },
+      "ids": [
+        0
+      ]
     }
   },
   "rows": [
@@ -69,7 +80,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0\n",
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -135,7 +146,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true&f.isSchemaValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -218,7 +229,27 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "XML Schema Validation report"
+          "title": "XML Schema Validation report",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
+            }
+          ]
         },
         {
           "span": 4,
@@ -230,7 +261,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true&f.isValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -313,7 +344,27 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "INSPIRE validation report"
+          "title": "INSPIRE validation report",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            }
+          ]
         },
         {
           "span": 4,
@@ -325,7 +376,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -408,7 +459,266 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Is above 75% for completeness indicator"
+          "title": "Is above 75% for completeness indicator",
+          "sortBy": "count",
+          "colorMode": "listWithValues",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Resource conformity",
+      "height": "350px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "custom": "&fq=+(resourceType:dataset resourceType:series)"
+          },
+          "mode": "count",
+          "field": "inspireConformResource",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "colorMode": "listWithValues",
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "chartColorPalette": [
+            {
+              "label": "false",
+              "color": "#e24d42"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            }
+          ],
+          "title": "Conformant data sets"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "chartColorPalette": [
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
+            }
+          ],
+          "colorMode": "listWithValues",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "custom": "&fq=+resourceType:service"
+          },
+          "mode": "count",
+          "field": "inspireConformResource",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Conformant services"
         }
       ]
     },
@@ -429,7 +739,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
             "custom": ""
           },
           "size": 0,
@@ -471,7 +781,8 @@
             "resourceTitle",
             "isSchemaValid",
             "isValid",
-            "completenessIndicator"
+            "completenessIndicator",
+            "inspireConformResource"
           ],
           "highlight": [],
           "sortable": false,
@@ -483,8 +794,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=500",
-            "basic_query": "q=*%3A*&fq=documentType:metadata"
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=500",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\""
           },
           "field_list": false,
           "status": "Stable",
@@ -492,7 +803,7 @@
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 50,
+          "exportSize": 500,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
@@ -521,8 +832,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
             "custom": ""
           },
           "group": "default",
@@ -572,7 +883,7 @@
     "hide": false,
     "dropdown_collections": false
   },
-  "solr": {
+   "solr": {
     "server": "${webapp.rootUrl}",
     "core_name": "data",
     "core_list": [
