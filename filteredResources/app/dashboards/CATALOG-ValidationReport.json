@@ -136,7 +136,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true&f.isSchemaValid.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isSchemaValid&facet.limit=3&facet.missing=true&f.isSchemaValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -251,7 +251,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true&f.isValid.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isValid&facet.limit=3&facet.missing=true&f.isValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -366,7 +366,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false&f.isAboveThreshold.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -490,7 +490,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
             "custom": "&fq=+(resourceType:dataset resourceType:series)"
           },
           "mode": "count",
@@ -624,7 +624,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&fq=territory:\"NL\"&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
             "custom": "&fq=+resourceType:service"
           },
           "mode": "count",
@@ -761,7 +761,7 @@
           ],
           "type": "table",
           "size": 10,
-          "pages": 50,
+          "pages": 20,
           "offset": 0,
           "style": {
             "font-size": "9pt"
@@ -784,8 +784,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=500",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\""
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=200",
+            "basic_query": "q=*%3A*&fq=documentType:metadata"
           },
           "field_list": false,
           "status": "Stable",
@@ -834,7 +834,8 @@
           "fields": [
             "territory",
             "isValid",
-            "isSchemaValid"
+            "isSchemaValid",
+            "resourceType"
           ],
           "field_list": true,
           "spyable": true,
@@ -873,7 +874,7 @@
     "hide": false,
     "dropdown_collections": false
   },
-   "solr": {
+  "solr": {
     "server": "${webapp.rootUrl}",
     "core_name": "data",
     "core_list": [
