@@ -419,17 +419,6 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0
-        },
-        {
-          "error": false,
-          "span": 1,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "Not created: DSi2.x",
-          "style": {}
         }
       ]
     },
