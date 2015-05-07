@@ -30,12 +30,12 @@
       ],
       "list": {
         "0": {
-          "from": "NOW/YEAR-2YEAR",
+          "from": "NOW/YEAR-3YEAR",
           "to": "NOW/YEAR%2B1YEAR",
           "field": "reportingDate",
           "type": "time",
-          "fromDateObj": "2012-10-21T13:36:39.948Z",
-          "toDateObj": "2014-10-21T13:36:39.949Z",
+          "fromDateObj": "2012-05-07T11:44:35.786Z",
+          "toDateObj": "2015-05-07T11:44:35.786Z",
           "mandate": "must",
           "active": true,
           "alias": "",
@@ -51,14 +51,14 @@
     {
       "title": "Query and Time Window",
       "height": "50px",
-      "editable": false,
+      "editable": true,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": "",
-          "span": 5,
-          "editable": false,
+          "span": 4,
+          "editable": true,
           "type": "timepicker",
           "loadingEditor": false,
           "status": "Stable",
@@ -68,9 +68,10 @@
             "2y",
             "3y",
             "4y",
-            "5y"
+            "5y",
+            "6y"
           ],
-          "timespan": "2y",
+          "timespan": "3y",
           "timefield": "reportingDate",
           "timeformat": "",
           "refresh": {
@@ -84,8 +85,8 @@
         },
         {
           "error": false,
-          "span": 7,
-          "editable": false,
+          "span": 4,
+          "editable": true,
           "group": [
             "default"
           ],
@@ -102,30 +103,11 @@
           "title": "Search",
           "spyable": true,
           "def_type": ""
-        }
-      ]
-    },
-    {
-      "title": "Filters",
-      "height": "50px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 9,
-          "editable": false,
-          "spyable": true,
-          "group": [
-            "default"
-          ],
-          "type": "filtering"
         },
         {
           "error": false,
-          "span": 3,
-          "editable": false,
+          "span": 4,
+          "editable": true,
           "type": "text",
           "loadingEditor": false,
           "status": "Stable",
@@ -136,15 +118,34 @@
       ]
     },
     {
+      "title": "Filters",
+      "height": "50px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 9,
+          "editable": true,
+          "spyable": true,
+          "group": [
+            "default"
+          ],
+          "type": "filtering"
+        }
+      ]
+    },
+    {
       "title": "Graph",
       "height": "450px",
-      "editable": false,
+      "editable": true,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "span": 12,
-          "editable": false,
+          "editable": true,
           "type": "histogram",
           "loadingEditor": false,
           "mode": "values",
@@ -154,7 +155,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000",
+            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000\n",
             "custom": "&fq=indicatorName:dsv_num"
           },
           "max_rows": 100000,
@@ -198,21 +199,89 @@
             "query_as_alias": false
           },
           "title": "Number of spatial data sets reported",
-          "lines_smooth": true
+          "lines_smooth": true,
+          "show_queries": true
+        }
+      ]
+    },
+    {
+      "title": "Graph",
+      "height": "450px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 12,
+          "editable": true,
+          "type": "histogram",
+          "loadingEditor": false,
+          "mode": "values",
+          "time_field": "reportingDate",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000\n",
+            "custom": "&fq=indicatorName:nsv_numallserv"
+          },
+          "max_rows": 100000,
+          "value_field": "indicatorValue",
+          "group_field": "territory",
+          "auto_int": true,
+          "resolution": 100,
+          "interval": "7d",
+          "intervals": [
+            "auto",
+            "1s",
+            "1m",
+            "5m",
+            "10m",
+            "30m",
+            "1h",
+            "3h",
+            "12h",
+            "1d",
+            "1w",
+            "1M",
+            "1y"
+          ],
+          "fill": 0,
+          "linewidth": 2,
+          "timezone": "browser",
+          "spyable": true,
+          "zoomlinks": true,
+          "bars": false,
+          "stack": false,
+          "points": true,
+          "lines": true,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": true,
+          "options": true,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "title": "Number of network services reported",
+          "lines_smooth": true,
+          "show_queries": true
         }
       ]
     },
     {
       "title": "Table",
       "height": "150px",
-      "editable": false,
+      "editable": true,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
-          "error": false,
           "span": 12,
-          "editable": false,
+          "editable": true,
           "type": "table",
           "loadingEditor": false,
           "status": "Stable",
@@ -221,8 +290,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc&wt=json&rows=500",
-            "basic_query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-2YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc",
+            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc&wt=json&rows=500",
+            "basic_query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc",
             "custom": "&fq=indicatorName:dsv_num"
           },
           "size": 100,
@@ -269,12 +338,13 @@
           "displayLinkIcon": true,
           "imageFields": [],
           "imgFieldWidth": "auto",
-          "imgFieldHeight": "85px"
+          "imgFieldHeight": "85px",
+          "show_queries": true
         }
       ]
     }
   ],
-  "editable": false,
+  "editable": true,
   "index": {
     "interval": "none",
     "pattern": "[logstash-]YYYY.MM.DD",
