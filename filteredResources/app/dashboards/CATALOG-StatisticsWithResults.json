@@ -198,7 +198,8 @@
             "#DEDAF7"
           ],
           "title": "Number of records per annex",
-          "show_queries": true
+          "show_queries": true,
+          "logAxis":true
         }
       ]
     },
@@ -552,7 +553,8 @@
             "#DEDAF7"
           ],
           "title": "Spatial resolution",
-          "show_queries": true
+          "show_queries": true,
+          "logAxis":true
         },
         {
           "span": 8,
@@ -647,7 +649,8 @@
             "#DEDAF7"
           ],
           "title": "Coordinate system used",
-          "show_queries": true
+          "show_queries": true,
+          "logAxis":true
         }
       ]
     },
@@ -707,6 +710,7 @@
             "event_timestamp",
             "desc"
           ],
+          "isLoadingImportantFieldOnly": true,
           "important_fields": [
             "dateStamp",
             "harvestedDate",

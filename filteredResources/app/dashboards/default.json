@@ -707,6 +707,7 @@
             "event_timestamp",
             "desc"
           ],
+          "isLoadingImportantFieldOnly": true,
           "important_fields": [
             "dateStamp",
             "documentType",

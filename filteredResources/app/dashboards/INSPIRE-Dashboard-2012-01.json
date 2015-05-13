@@ -383,8 +383,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -413,23 +420,19 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
           "index_limit": 0
-        },
-        {
-          "error": false,
-          "span": 1,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "Not created: DSi2.x",
-          "style": {}
         }
       ]
     },
@@ -490,8 +493,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,

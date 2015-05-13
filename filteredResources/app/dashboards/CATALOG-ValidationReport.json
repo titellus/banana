@@ -24,12 +24,13 @@
     },
     "filter": {
       "idQueue": [
-        0,
         1,
         2
       ],
       "list": {},
-      "ids": []
+      "ids": [
+        0
+      ]
     }
   },
   "rows": [
@@ -69,7 +70,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0\n",
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -84,8 +85,7 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true,
-          "mode": "count"
+          "show_queries": true
         },
         {
           "error": false,
@@ -225,19 +225,19 @@
           "chartColorPalette": [
             {
               "label": "true",
-              "color": "#7EB26D"
-            },
-            {
-              "label": "false",
-              "color": "#e23737"
+              "color": "#7eb26d"
             },
             {
               "label": "Missing field",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
             },
             {
               "label": "Other values",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
             }
           ]
         },
@@ -339,20 +339,20 @@
           "colorMode": "listWithValues",
           "chartColorPalette": [
             {
-              "label": "false",
-              "color": "#7EB26D"
+              "label": "true",
+              "color": "#7eb26d"
             },
             {
-              "label": "true",
-              "color": "#e23737"
+              "label": "false",
+              "color": "#e24d42"
             },
             {
               "label": "Missing field",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
             },
             {
               "label": "Other values",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
             }
           ]
         },
@@ -366,7 +366,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=true&f.isAboveThreshold.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -455,21 +455,296 @@
           "chartColorPalette": [
             {
               "label": "true",
-              "color": "#7EB26D"
+              "color": "#7eb26d"
             },
             {
               "label": "false",
-              "color": "#e23737"
+              "color": "#e24d42"
             },
             {
               "label": "Missing field",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
             },
             {
               "label": "Other values",
-              "color": "#b1b1b1"
+              "color": "#aaaaaa"
             }
           ]
+        }
+      ]
+    },
+    {
+      "title": "Resource conformity",
+      "height": "350px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "custom": "&fq=+(resourceType:dataset resourceType:series)"
+          },
+          "mode": "count",
+          "field": "inspireConformResource",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "colorMode": "listWithValues",
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "chartColorPalette": [
+            {
+              "label": "false",
+              "color": "#e24d42"
+            },
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            }
+          ],
+          "title": "Conformant data sets"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "chartColorPalette": [
+            {
+              "label": "Missing field",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "Other values",
+              "color": "#aaaaaa"
+            },
+            {
+              "label": "true",
+              "color": "#7eb26d"
+            },
+            {
+              "label": "false",
+              "color": "#e24d42"
+            }
+          ],
+          "colorMode": "listWithValues",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "custom": "&fq=+resourceType:service"
+          },
+          "mode": "count",
+          "field": "inspireConformResource",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Conformant services"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "facet",
+          "loadingEditor": false,
+          "status": "Stable",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
+            "custom": ""
+          },
+          "group": "default",
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "territory",
+            "isValid",
+            "isSchemaValid",
+            "resourceType"
+          ],
+          "field_list": true,
+          "spyable": true,
+          "facet_limit": 30,
+          "foundResults": true,
+          "header_title": "Limit Your Search",
+          "toggle_element": "territory",
+          "show_queries": true,
+          "offset": 0,
+          "exportSize": null
         }
       ]
     },
@@ -477,7 +752,7 @@
       "title": "Validation details",
       "height": "350px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
@@ -490,7 +765,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
+            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
             "custom": ""
           },
           "size": 0,
@@ -515,14 +790,14 @@
       "collapsable": true,
       "panels": [
         {
-          "span": 8,
+          "span": 12,
           "editable": true,
           "group": [
             "default"
           ],
           "type": "table",
           "size": 10,
-          "pages": 50,
+          "pages": 20,
           "offset": 0,
           "style": {
             "font-size": "9pt"
@@ -532,7 +807,8 @@
             "resourceTitle",
             "isSchemaValid",
             "isValid",
-            "completenessIndicator"
+            "completenessIndicator",
+            "inspireConformResource"
           ],
           "highlight": [],
           "sortable": false,
@@ -544,7 +820,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=500",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=200",
             "basic_query": "q=*%3A*&fq=documentType:metadata"
           },
           "field_list": false,
@@ -553,7 +829,7 @@
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 50,
+          "exportSize": 500,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
@@ -563,63 +839,14 @@
             "event_timestamp",
             "desc"
           ],
+          "isLoadingImportantFieldOnly": true,
           "important_fields": [
             "resourceTitle",
             "completenessIndicator",
             "isValid",
             "isSchemaValid"
           ],
-          "show_queries": true,
-          "couchbase": {
-            "bucket": "",
-            "document": "",
-            "view": ""
-          },
-          "overflowItems": [
-            {
-              "key": "scroll",
-              "value": "height"
-            },
-            {
-              "key": "expand",
-              "value": "min-height"
-            }
-          ]
-        },
-        {
-          "span": 4,
-          "editable": true,
-          "type": "facet",
-          "loadingEditor": false,
-          "status": "Stable",
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
-            "custom": ""
-          },
-          "group": "default",
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "territory",
-            "isValid",
-            "isSchemaValid"
-          ],
-          "field_list": true,
-          "spyable": true,
-          "facet_limit": 30,
-          "foundResults": true,
-          "header_title": "Limit Your Search",
-          "toggle_element": "territory",
-          "show_queries": true,
-          "offset": 0,
-          "exportSize": null
+          "show_queries": true
         }
       ]
     }

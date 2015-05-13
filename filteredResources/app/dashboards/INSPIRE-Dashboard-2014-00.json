@@ -1,5 +1,5 @@
 {
-  "title": "INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity",
+  "title": "INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity",
   "services": {
     "query": {
       "idQueue": [
@@ -147,7 +147,7 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Network services availability and conformity)",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)",
           "style": {}
         }
       ]
@@ -180,8 +180,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -209,8 +216,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -247,8 +261,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -276,8 +297,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -314,8 +342,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -343,8 +378,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -392,8 +434,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -430,8 +479,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -459,8 +515,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -497,8 +560,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -526,8 +596,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -562,12 +639,12 @@
     "dropdown_collections": false
   },
   "solr": {
-    "server": "/",
+    "server": "${webapp.rootUrl}",
     "core_name": "data",
     "core_list": [
       "dashboard",
       "data"
     ],
-    "global_params": "&fq=%2BdocumentType:indicator %2BreportingYear:2013"
+    "global_params": "&fq=%2BdocumentType:indicator %2BreportingYear:2014"
   }
 }
