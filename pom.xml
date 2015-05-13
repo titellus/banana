@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.dabos</groupId>
-  <artifactId>daobs-dashboard</artifactId>
-  <name>Dashboard</name>
+  <artifactId>daobs-dashboard2</artifactId>
+  <name>Dashboard - dev-2.0</name>
   <version>0.1</version>
 
   <parent>
@@ -117,18 +117,18 @@
           <!-- TODO: Remove once minified version works
            See https://github.com/LucidWorks/banana/issues/151 -->
           <execution>
-            <id>copy-dashboard-app2</id>
+            <id>copy-dashboard-app</id>
             <phase>prepare-package</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}/web/dashboard</outputDirectory>
+              <outputDirectory>${project.build.directory}/web/dashboard2</outputDirectory>
               <overwrite>true</overwrite>
               <resources>
                 <resource>
                   <directory>${project.basedir}/src</directory>
-                  <targetPath>${project.build.directory}/web/dashboard</targetPath>
+                  <targetPath>${project.build.directory}/web/dashboard2</targetPath>
                 </resource>
               </resources>
             </configuration>
