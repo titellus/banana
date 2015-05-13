@@ -31,8 +31,9 @@ function (Settings) {
      * your banana web application.
      * @type {String}
      */
-    solr: "/solr/",
-    solr_core: "logstash_logs",
+    solr: "/",
+    solr_core: "data",
+    timefield: 'event_timestamp',
 
     /**
      * The default Solr index to use for storing objects internal to Banana, such as 
@@ -46,7 +47,7 @@ function (Settings) {
      * internal to banana.
      * @type {String}
      */
-    banana_index: "banana-int",
+    banana_index: "dashboard",
 
     /**
      * The default settings will use /admin/luke API to retrieve all fields from Solr including
