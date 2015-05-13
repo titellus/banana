@@ -177,8 +177,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -206,8 +213,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -244,8 +258,15 @@
           "map": "europe",
           "colors": [
             "#A0E2E2",
+            "#dcff37",
             "#265656"
           ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "polynomial",
           "size": 100,
           "exclude": [],
           "spyable": true,

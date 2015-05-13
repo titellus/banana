@@ -78,6 +78,7 @@ function (angular, app, _, kbn, moment) {
       style   : {'font-size': '9pt'},
       overflow: 'min-height',
       fields  : [],
+      isLoadingImportantFieldOnly: false,
       important_fields : [],
       highlight : [],
       sortable: true,
@@ -250,6 +251,13 @@ function (angular, app, _, kbn, moment) {
       // Set the panel's query
       $scope.panel.queries.basic_query = querySrv.getORquery() + fq + sorting;
       $scope.panel.queries.query = $scope.panel.queries.basic_query + wt_json + rows_limit;
+
+      // Restrict to fields to be displayed on the table
+      if ($scope.panel.isLoadingImportantFieldOnly) {
+        var fl = "&fl=" + $scope.panel.important_fields.join(',');
+        $scope.panel.queries.query = $scope.panel.queries.query + fl;
+        $scope.panel.queries.basic_query = $scope.panel.queries.basic_query + fl;
+      }
 
       // Set the additional custom query
       if ($scope.panel.queries.custom != null) {

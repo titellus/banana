@@ -65,6 +65,7 @@
                     <argument>${project.basedir}/node_modules/grunt-cli/bin/grunt</argument>
                     <argument>--gruntfile</argument>
                     <argument>${project.basedir}/Gruntfile.js</argument>
+                    <argument>--force</argument>
                     <argument>build</argument>
                   </arguments>
                   <workingDirectory>${project.basedir}</workingDirectory>

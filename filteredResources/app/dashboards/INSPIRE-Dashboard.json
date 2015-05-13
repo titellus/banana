@@ -166,6 +166,7 @@
             "reportingYear",
             "desc"
           ],
+          "isLoadingImportantFieldOnly": true,
           "important_fields": [
             "_version_",
             "documentType",
