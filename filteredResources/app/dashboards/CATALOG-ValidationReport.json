@@ -23,14 +23,9 @@
       ]
     },
     "filter": {
-      "idQueue": [
-        1,
-        2
-      ],
+      "idQueue": [],
       "list": {},
-      "ids": [
-        0
-      ]
+      "ids": []
     }
   },
   "rows": [
