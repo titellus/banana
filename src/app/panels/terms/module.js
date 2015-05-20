@@ -94,12 +94,18 @@ function (angular, app, _, $, kbn) {
     }
 
     $scope.testMultivalued = function() {
-      if($scope.panel.field && $scope.fields.typeList[$scope.panel.field] && $scope.fields.typeList[$scope.panel.field].schema.indexOf("M") > -1) {
+      if($scope.panel.field &&
+        $scope.fields.typeList[$scope.panel.field] &&
+        $scope.fields.typeList[$scope.panel.field].schema &&
+        $scope.fields.typeList[$scope.panel.field].schema.indexOf("M") > -1) {
         $scope.panel.error = "Can't proceed with Multivalued field";
         return;
       }
 
-      if($scope.panel.stats_field && $scope.fields.typeList[$scope.panel.stats_field].schema.indexOf("M") > -1) {
+      if($scope.panel.stats_field &&
+        $scope.fields.typeList[$scope.panel.stats_field] &&
+        $scope.fields.typeList[$scope.panel.stats_field].schema &&
+        $scope.fields.typeList[$scope.panel.stats_field].schema.indexOf("M") > -1) {
         $scope.panel.error = "Can't proceed with Multivalued field";
         return;
       }
