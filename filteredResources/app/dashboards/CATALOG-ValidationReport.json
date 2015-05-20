@@ -23,7 +23,10 @@
       ]
     },
     "filter": {
-      "idQueue": [],
+      "idQueue": [
+        0,
+        1
+      ],
       "list": {},
       "ids": []
     }
@@ -65,7 +68,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0\n",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -80,7 +83,8 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true
+          "show_queries": true,
+          "mode": "count"
         },
         {
           "error": false,
@@ -99,18 +103,16 @@
       "title": "Filter",
       "height": "150px",
       "editable": true,
-      "collapse": true,
+      "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": false,
-          "span": 5,
+          "span": 12,
           "editable": true,
-          "spyable": true,
-          "group": [
-            "default"
-          ],
-          "type": "filtering"
+          "type": "filtering",
+          "loadingEditor": false,
+          "spyable": true
         }
       ]
     },
@@ -361,7 +363,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=false&f.isAboveThreshold.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=true&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -485,7 +487,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=true&f.inspireConformResource.facet.sort=count",
             "custom": "&fq=+(resourceType:dataset resourceType:series)"
           },
           "mode": "count",
@@ -619,7 +621,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=false&f.inspireConformResource.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=true&f.inspireConformResource.facet.sort=count",
             "custom": "&fq=+resourceType:service"
           },
           "mode": "count",
@@ -716,8 +718,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid",
+            "query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&facet.field=resourceType&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&facet=true&facet.field=territory&facet.field=isValid&facet.field=isSchemaValid&facet.field=resourceType",
             "custom": ""
           },
           "group": "default",
@@ -760,7 +762,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&fq=territory:\"NL\"&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.pivot=territory,completenessIndicator&facet.limit=30&facet.pivot.mincount=0",
             "custom": ""
           },
           "size": 0,
@@ -806,7 +808,7 @@
             "inspireConformResource"
           ],
           "highlight": [],
-          "sortable": false,
+          "sortable": true,
           "header": true,
           "paging": true,
           "spyable": true,
@@ -815,8 +817,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=200",
-            "basic_query": "q=*%3A*&fq=documentType:metadata"
+            "query": "q=*%3A*&fq=documentType:metadata&sort=id desc&wt=json&rows=200&fl=resourceTitle,completenessIndicator,isValid,isSchemaValid,id",
+            "basic_query": "q=*%3A*&fq=documentType:metadata&sort=id desc&fl=resourceTitle,completenessIndicator,isValid,isSchemaValid,id"
           },
           "field_list": false,
           "status": "Stable",
@@ -824,14 +826,14 @@
           "normTimes": true,
           "title": "Events",
           "saveOption": "json",
-          "exportSize": 500,
+          "exportSize": 200,
           "exportAll": true,
           "displayLinkIcon": true,
           "imageFields": [],
           "imgFieldWidth": "auto",
           "imgFieldHeight": "85px",
           "sort": [
-            "event_timestamp",
+            "id",
             "desc"
           ],
           "isLoadingImportantFieldOnly": true,
@@ -839,9 +841,25 @@
             "resourceTitle",
             "completenessIndicator",
             "isValid",
-            "isSchemaValid"
+            "isSchemaValid",
+            "id"
           ],
-          "show_queries": true
+          "show_queries": true,
+          "couchbase": {
+            "bucket": "",
+            "document": "",
+            "view": ""
+          },
+          "overflowItems": [
+            {
+              "key": "scroll",
+              "value": "height"
+            },
+            {
+              "key": "expand",
+              "value": "min-height"
+            }
+          ]
         }
       ]
     }
