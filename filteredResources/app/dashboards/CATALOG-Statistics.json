@@ -42,7 +42,7 @@
       "panels": [
         {
           "error": false,
-          "span": 9,
+          "span": 8,
           "editable": true,
           "group": [
             "default"
@@ -60,7 +60,7 @@
           "def_type": ""
         },
         {
-          "span": 3,
+          "span": 4,
           "editable": true,
           "type": "hits",
           "loadingEditor": false,
@@ -84,7 +84,8 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true
+          "show_queries": true,
+          "mode": "count"
         }
       ]
     },
@@ -97,13 +98,37 @@
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 4,
           "editable": true,
           "spyable": true,
           "group": [
             "default"
           ],
           "type": "filtering"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "tagcloud",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=territory&facet.limit=30",
+            "custom": ""
+          },
+          "field": "territory",
+          "exclude": [],
+          "size": 30,
+          "alignment": "horizontal",
+          "fontScale": 20,
+          "isSizeAdjusted": false,
+          "isCountDisplayed": false,
+          "spyable": true,
+          "show_queries": true,
+          "title": "Click to filter"
         },
         {
           "span": 4,
@@ -115,7 +140,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=true&f.inspireAnnex.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -198,7 +223,10 @@
             "#DEDAF7"
           ],
           "title": "Number of records per annex",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         }
       ]
     },
@@ -219,7 +247,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireTheme&facet.limit=35&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireTheme&facet.limit=35&facet.missing=true&f.inspireTheme.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -237,7 +265,7 @@
           "donut": false,
           "tilt": false,
           "labels": true,
-          "logAxis": false,
+          "logAxis": true,
           "arrangement": "vertical",
           "chart": "bar",
           "counter_pos": "right",
@@ -303,7 +331,9 @@
           ],
           "title": "Number of record per themes",
           "show_queries": true,
-          "logAxis":true
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         }
       ]
     },
@@ -324,7 +354,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resourceType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resourceType&facet.limit=10&facet.missing=true&f.resourceType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -346,7 +376,7 @@
           "arrangement": "horizontal",
           "chart": "pie",
           "counter_pos": "above",
-          "lastColor": "",
+          "lastColor": "rgb(31,120,193)",
           "spyable": true,
           "chartColors": [
             "#E24D42",
@@ -359,7 +389,10 @@
             "#C15C17"
           ],
           "title": "Type of resources",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         },
         {
           "span": 4,
@@ -371,7 +404,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireServiceType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireServiceType&facet.limit=10&facet.missing=true&f.inspireServiceType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -403,7 +436,10 @@
             "#080b0d"
           ],
           "title": "Type of services",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         },
         {
           "span": 4,
@@ -415,7 +451,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=spatialRepresentationType&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=spatialRepresentationType&facet.limit=10&facet.missing=true&f.spatialRepresentationType.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -449,7 +485,10 @@
             "#f4c59f"
           ],
           "title": "Type of datasets",
-          "show_queries": true
+          "show_queries": true,
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         }
       ]
     },
@@ -470,7 +509,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=resolutionScaleDenominator&facet.limit=10&facet.missing=true&f.resolutionScaleDenominator.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -488,7 +527,7 @@
           "donut": false,
           "tilt": false,
           "labels": true,
-          "logAxis": false,
+          "logAxis": true,
           "arrangement": "horizontal",
           "chart": "bar",
           "counter_pos": "above",
@@ -554,7 +593,9 @@
           ],
           "title": "Spatial resolution",
           "show_queries": true,
-          "logAxis":true
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         },
         {
           "span": 8,
@@ -566,7 +607,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=coordinateSystem&facet.limit=40&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=coordinateSystem&facet.limit=40&facet.missing=true&f.coordinateSystem.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -584,7 +625,7 @@
           "donut": false,
           "tilt": false,
           "labels": true,
-          "logAxis": false,
+          "logAxis": true,
           "arrangement": "horizontal",
           "chart": "bar",
           "counter_pos": "above",
@@ -650,7 +691,9 @@
           ],
           "title": "Coordinate system used",
           "show_queries": true,
-          "logAxis":true
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         }
       ]
     },
