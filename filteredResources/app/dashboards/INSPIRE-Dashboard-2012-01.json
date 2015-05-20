@@ -364,7 +364,7 @@
       "panels": [
         {
           "error": false,
-          "span": 5,
+          "span": 6,
           "editable": false,
           "type": "map",
           "loadingEditor": false,
@@ -391,7 +391,7 @@
           "isZoomOnScrollEnabled": false,
           "isLegendDisplayed": true,
           "isZoomControlEnabled": true,
-          "normalizeFunction": "polynomial",
+          "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -400,7 +400,7 @@
         },
         {
           "error": false,
-          "span": 5,
+          "span": 6,
           "editable": false,
           "type": "map",
           "loadingEditor": false,
@@ -428,7 +428,7 @@
           "isZoomOnScrollEnabled": false,
           "isLegendDisplayed": true,
           "isZoomControlEnabled": true,
-          "normalizeFunction": "polynomial",
+          "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
           "spyable": true,
@@ -445,7 +445,7 @@
       "panels": [
         {
           "error": false,
-          "span": 5,
+          "span": 6,
           "editable": false,
           "type": "map",
           "loadingEditor": false,
@@ -474,7 +474,7 @@
         },
         {
           "error": false,
-          "span": 5,
+          "span": 6,
           "editable": false,
           "type": "map",
           "loadingEditor": false,
@@ -501,7 +501,7 @@
           "isZoomOnScrollEnabled": false,
           "isLegendDisplayed": true,
           "isZoomControlEnabled": true,
-          "normalizeFunction": "polynomial",
+          "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
           "spyable": true,
