@@ -42,7 +42,7 @@
       "panels": [
         {
           "error": false,
-          "span": 9,
+          "span": 8,
           "editable": true,
           "group": [
             "default"
@@ -60,7 +60,7 @@
           "def_type": ""
         },
         {
-          "span": 3,
+          "span": 4,
           "editable": true,
           "type": "hits",
           "loadingEditor": false,
@@ -84,7 +84,8 @@
           "labels": true,
           "spyable": true,
           "title": "Total Hits",
-          "show_queries": true
+          "show_queries": true,
+          "mode": "count"
         }
       ]
     },
@@ -97,13 +98,37 @@
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 4,
           "editable": true,
           "spyable": true,
           "group": [
             "default"
           ],
           "type": "filtering"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "tagcloud",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=territory&facet.limit=30",
+            "custom": ""
+          },
+          "field": "territory",
+          "exclude": [],
+          "size": 30,
+          "alignment": "horizontal",
+          "fontScale": 20,
+          "isSizeAdjusted": false,
+          "isCountDisplayed": false,
+          "spyable": true,
+          "show_queries": true,
+          "title": "Click to filter"
         },
         {
           "span": 4,
@@ -115,7 +140,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=false",
+            "query": "q=*%3A*&fq=documentType:metadata&wt=json&rows=0&facet=true&facet.field=inspireAnnex&facet.limit=10&facet.missing=true&f.inspireAnnex.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -199,7 +224,9 @@
           ],
           "title": "Number of records per annex",
           "show_queries": true,
-          "logAxis":true
+          "sortBy": "count",
+          "colorMode": "list",
+          "chartColorPalette": null
         }
       ]
     },
