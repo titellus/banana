@@ -34,8 +34,8 @@
           "to": "NOW/YEAR%2B1YEAR",
           "field": "reportingDate",
           "type": "time",
-          "fromDateObj": "2012-05-20T07:31:16.578Z",
-          "toDateObj": "2015-05-20T07:31:16.584Z",
+          "fromDateObj": "2012-05-20T09:53:02.004Z",
+          "toDateObj": "2015-05-20T09:53:02.005Z",
           "mandate": "must",
           "active": true,
           "alias": "",
@@ -50,11 +50,21 @@
   "rows": [
     {
       "title": "Query and Time Window",
-      "height": "50px",
+      "height": "150px",
       "editable": true,
       "collapse": false,
       "collapsable": true,
       "panels": [
+        {
+          "error": false,
+          "span": 2,
+          "editable": true,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "markdown",
+          "content": "This dashboard highlights main indicators trends.\n\n[More details with maps](#/dashboard/solr/INSPIRE%20indicator%20trends%20(map))",          "style": {}
+        },
         {
           "error": "",
           "span": 4,
@@ -84,36 +94,29 @@
           "title": "Time Window"
         },
         {
-          "error": false,
           "span": 6,
           "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "query",
-          "label": "Search",
-          "history": [
-            "*:*",
-            "territory:de",
-            "territory:fr"
-          ],
-          "remember": 10,
-          "pinned": true,
-          "query": "*:*",
-          "title": "Search",
-          "spyable": true,
-          "def_type": ""
-        },
-        {
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "text",
+          "type": "heatmap",
           "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "This dashboard highlights main indicators trends.",
-          "style": {}
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&wt=json&rows=0&facet=true&facet.pivot=reportingYear,territory&facet.limit=300&facet.pivot.mincount=0",
+            "custom": "&fq=indicatorName:dsv_num"
+          },
+          "size": 0,
+          "row_field": "reportingYear",
+          "col_field": "territory",
+          "row_size": 300,
+          "editor_size": 300,
+          "color": "blue",
+          "spyable": true,
+          "transpose_show": true,
+          "transposed": false,
+          "show_queries": true,
+          "title": "Monitoring report available per year"
         }
       ]
     },
@@ -251,40 +254,6 @@
       ]
     },
     {
-      "title": "Graph",
-      "height": "150px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "heatmap",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&wt=json&rows=0&facet=true&facet.pivot=reportingYear,territory&facet.limit=300&facet.pivot.mincount=0",
-            "custom": "&fq=indicatorName:dsv_num"
-          },
-          "size": 0,
-          "row_field": "reportingYear",
-          "col_field": "territory",
-          "row_size": 300,
-          "editor_size": 300,
-          "color": "blue",
-          "spyable": true,
-          "transpose_show": true,
-          "transposed": false,
-          "show_queries": true,
-          "title": "Monitoring report available per year"
-        }
-      ]
-    },
-    {
       "title": "Filters",
       "height": "50px",
       "editable": true,
@@ -293,13 +262,34 @@
       "panels": [
         {
           "error": false,
-          "span": 9,
+          "span": 6,
           "editable": true,
           "spyable": true,
           "group": [
             "default"
           ],
           "type": "filtering"
+        },
+        {
+          "error": false,
+          "span": 6,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "query",
+          "label": "Search",
+          "history": [
+            "*:*",
+            "territory:de",
+            "territory:fr"
+          ],
+          "remember": 10,
+          "pinned": true,
+          "query": "*:*",
+          "title": "Search",
+          "spyable": true,
+          "def_type": ""
         }
       ]
     },
