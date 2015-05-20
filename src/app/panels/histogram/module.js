@@ -114,13 +114,21 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
 
     _.defaults($scope.panel,_d);
 
+    function setLegendOrder () {
+      $scope.orderByField = $scope.panel.sortBy === 'count' ?
+        'hits' : 'info.alias';
+      $scope.reverseOrder = $scope.panel.order === 'ascending' ? false : true;
+    }
+
     $scope.init = function() {
       // Hide view options by default
       $scope.options = false;
       $scope.$on('refresh',function(){
         $scope.get_data();
+        setLegendOrder();
       });
       $scope.get_data();
+      setLegendOrder();
 
     };
 
@@ -452,12 +460,9 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
       $scope.inspector = angular.toJson(JSON.parse(request.toString()),true);
     };
 
+
     $scope.set_refresh = function (state) {
       $scope.refresh = state;
-
-      $scope.orderByField = $scope.panel.sortBy === 'count' ?
-        'hits' : 'info.alias';
-      $scope.reverseOrder = $scope.panel.order === 'ascending' ? false : true;
     };
 
     $scope.close_edit = function() {
