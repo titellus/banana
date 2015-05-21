@@ -360,7 +360,7 @@
     },
     {
       "title": "Indicator reporting - data set conformity (4)",
-      "height": "480px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -445,7 +445,7 @@
     },
     {
       "title": "Indicator reporting - data set conformity (5)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -530,7 +530,7 @@
     },
     {
       "title": "Indicator reporting - data set accessibility (1)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -614,7 +614,7 @@
     },
     {
       "title": "Indicator reporting - data set accessibility (2)",
-      "height": "480px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,

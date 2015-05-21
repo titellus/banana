@@ -25,27 +25,17 @@
     "filter": {
       "idQueue": [
         0,
+        1,
         2
       ],
-      "list": {
-        "1": {
-          "type": "exists",
-          "field": "reportingDate",
-          "mandate": "mustNot",
-          "active": true,
-          "alias": "",
-          "id": 1
-        }
-      },
-      "ids": [
-        1
-      ]
+      "list": {},
+      "ids": []
     }
   },
   "rows": [
     {
       "title": "Query",
-      "height": "10px",
+      "height": "250px",
       "editable": true,
       "collapse": false,
       "collapsable": true,
@@ -62,7 +52,137 @@
           "style": {}
         },
         {
-          "span": 6,
+          "span": 4,
+          "editable": true,
+          "type": "tagcloud",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0&facet=true&facet.field=indicatorName&facet.limit=60",
+            "custom": ""
+          },
+          "field": "indicatorName",
+          "exclude": [],
+          "size": 60,
+          "alignment": "horizontal",
+          "fontScale": 20,
+          "isSizeAdjusted": false,
+          "isCountDisplayed": false,
+          "spyable": true,
+          "show_queries": true
+        },
+        {
+          "error": false,
+          "span": 5,
+          "editable": true,
+          "type": "filtering",
+          "loadingEditor": false,
+          "spyable": true
+        }
+      ]
+    },
+    {
+      "title": "Filter",
+      "height": "480px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 3,
+          "editable": true,
+          "type": "facet",
+          "loadingEditor": false,
+          "status": "Stable",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName&wt=json",
+            "basic_query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName",
+            "custom": ""
+          },
+          "group": "default",
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "territory",
+            "reportingYear",
+            "indicatorName"
+          ],
+          "field_list": true,
+          "spyable": true,
+          "facet_limit": 60,
+          "foundResults": true,
+          "header_title": "",
+          "toggle_element": "indicatorName",
+          "show_queries": true,
+          "title": "Narrow your search",
+          "offset": 0,
+          "exportSize": null
+        },
+        {
+          "span": 9,
+          "editable": true,
+          "type": "scatterplot",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&fl=reportingYear,indicatorValue,territory&wt=csv&rows=1000",
+            "custom": ""
+          },
+          "max_rows": 1000,
+          "field": "date",
+          "xAxis": "Date",
+          "yAxis": "Rates",
+          "fl": "open,high,low,close",
+          "rightAxis": "volume",
+          "spyable": true,
+          "title": "Select one indicator to visualise on this chart (by using the \"narrow your search\" panel)",
+          "xaxis": "reportingYear",
+          "yaxis": "indicatorValue",
+          "field_type": "territory",
+          "show_queries": true
+        }
+      ]
+    },
+    {
+      "title": "Filter",
+      "height": "450px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 3,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "query",
+          "label": "Search",
+          "history": [
+            "*:*"
+          ],
+          "remember": 10,
+          "pinned": true,
+          "query": "*",
+          "title": "Search",
+          "spyable": true,
+          "def_type": ""
+        },
+        {
+          "span": 9,
           "editable": true,
           "group": [
             "default"
@@ -77,10 +197,9 @@
           "overflow": "min-height",
           "fields": [
             "territory",
-            "indicatorType",
-            "indicatorName",
             "indicatorValue",
-            "reportingYear"
+            "reportingYear",
+            "indicatorName"
           ],
           "highlight": [],
           "sortable": true,
@@ -95,7 +214,7 @@
             "query": "q=*%3A*&fq=documentType:indicator&sort=reportingYear desc&wt=json&rows=5000&fl=_version_,documentType,id,indicatorName,indicatorType,indicatorValue,reportingDate,territory,reportingYear",
             "basic_query": "q=*%3A*&fq=documentType:indicator&sort=reportingYear desc&fl=_version_,documentType,id,indicatorName,indicatorType,indicatorValue,reportingDate,territory,reportingYear"
           },
-          "field_list": false,
+          "field_list": true,
           "status": "Stable",
           "trimFactor": 300,
           "normTimes": true,
@@ -139,141 +258,6 @@
               "value": "min-height"
             }
           ]
-        },
-        {
-          "span": 3,
-          "editable": true,
-          "type": "facet",
-          "loadingEditor": false,
-          "status": "Stable",
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName&wt=json",
-            "basic_query": "q=*%3A*&fq=documentType:indicator&facet=true&facet.field=territory&facet.field=reportingYear&facet.field=indicatorName",
-            "custom": ""
-          },
-          "group": "default",
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "territory",
-            "reportingYear",
-            "indicatorName"
-          ],
-          "field_list": true,
-          "spyable": true,
-          "facet_limit": 60,
-          "foundResults": true,
-          "header_title": "",
-          "toggle_element": "indicatorName",
-          "show_queries": true,
-          "title": "Narrow your search",
-          "offset": 0,
-          "exportSize": null
-        }
-      ]
-    },
-    {
-      "title": "Filter",
-      "height": "480px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 9,
-          "editable": true,
-          "type": "scatterplot",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:indicator&fl=reportingYear,indicatorValue,territory&wt=csv&rows=1000",
-            "custom": ""
-          },
-          "max_rows": 1000,
-          "field": "date",
-          "xAxis": "Date",
-          "yAxis": "Rates",
-          "fl": "open,high,low,close",
-          "rightAxis": "volume",
-          "spyable": true,
-          "title": "Select one indicator to visualise on this chart (by using the \"narrow your search\" panel)",
-          "xaxis": "reportingYear",
-          "yaxis": "indicatorValue",
-          "field_type": "territory",
-          "show_queries": true
-        },
-        {
-          "error": false,
-          "span": 3,
-          "editable": true,
-          "type": "filtering",
-          "loadingEditor": false,
-          "spyable": true
-        }
-      ]
-    },
-    {
-      "title": "Filter",
-      "height": "450px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 2,
-          "editable": true,
-          "type": "hits",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=documentType:indicator&wt=json&rows=0\n",
-            "basic_query": "",
-            "custom": ""
-          },
-          "style": {
-            "font-size": "14pt"
-          },
-          "arrangement": "horizontal",
-          "chart": "total",
-          "counter_pos": "above",
-          "donut": false,
-          "tilt": false,
-          "labels": true,
-          "spyable": true,
-          "title": "Total Hits",
-          "show_queries": true,
-          "mode": "count"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "query",
-          "label": "Search",
-          "history": [
-            "*:*"
-          ],
-          "remember": 10,
-          "pinned": true,
-          "query": "*",
-          "title": "Search",
-          "spyable": true,
-          "def_type": ""
         }
       ]
     }

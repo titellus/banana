@@ -409,7 +409,7 @@
     },
     {
       "title": "Indicator reporting - conformity",
-      "height": "350px",
+      "height": "450px",
       "editable": true,
       "collapse": false,
       "collapsable": true,
@@ -467,7 +467,7 @@
     },
     {
       "title": "Indicator reporting - conformity (2)",
-      "height": "350px",
+      "height": "450px",
       "editable": true,
       "collapse": false,
       "collapsable": true,
@@ -552,7 +552,7 @@
     },
     {
       "title": "Indicator reporting - conformity (3)",
-      "height": "350px",
+      "height": "450px",
       "editable": true,
       "collapse": false,
       "collapsable": true,

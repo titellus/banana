@@ -255,7 +255,7 @@
     },
     {
       "title": "Indicator reporting - service conformity (1)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -340,7 +340,7 @@
     },
     {
       "title": "Indicator reporting - service conformity (2)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
