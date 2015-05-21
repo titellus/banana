@@ -346,7 +346,7 @@
           "mode": "mean",
           "field": "territory",
           "stats_field": "indicatorValue",
-          "decimal_points": 0,
+          "decimal_points": 2,
           "map": "europe",
           "colors": [
             "#A0E2E2",
