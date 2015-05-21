@@ -34,14 +34,14 @@
   },
   "rows": [{
     "title": "Indicator reporting - data set conformity",
-    "height": "350px",
+    "height": "450px",
     "editable": false,
     "collapse": false,
     "collapsable": true,
     "panels": [
       {
         "error": false,
-        "span": 8,
+        "span": 10,
         "editable": false,
         "type": "terms",
         "loadingEditor": false,
@@ -60,7 +60,7 @@
         "exclude": [],
         "missing": false,
         "other": false,
-        "size": 10,
+        "size": 40,
         "order": "ascending",
         "sortBy": "index",
         "style": {
@@ -132,31 +132,32 @@
           "#F9D9F9",
           "#DEDAF7"
         ],
-        "title": "Number of conformant spatial data sets (Annex I) - dsv21"
+        "title": "Number of conformant spatial data sets (Annex I) - dsv21",
+        "logAxis": true
       },
       {
         "error": false,
-        "span": 4,
+        "span": 2,
         "editable": false,
         "type": "text",
         "loadingEditor": false,
         "status": "Stable",
         "mode": "markdown",
-        "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)",
+        "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity)\n\n* Spatial data sets availability and conformity\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)\n\n\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Spatial data sets availability and conformity) |\n[2013](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Spatial data sets availability and conformity) |\n2014",
         "style": {}
       }
     ]
   },
     {
       "title": "Indicator reporting - data set conformity (2)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 10,
           "editable": false,
           "type": "terms",
           "loadingEditor": false,
@@ -175,7 +176,7 @@
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 40,
           "order": "ascending",
           "sortBy": "index",
           "style": {
@@ -247,20 +248,21 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Number of conformant spatial data sets (Annex II) - dsv22"
+          "title": "Number of conformant spatial data sets (Annex II) - dsv22",
+          "logAxis": true
         }
       ]
     },
     {
       "title": "Indicator reporting - data set conformity (3)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 10,
           "editable": false,
           "type": "terms",
           "loadingEditor": false,
@@ -279,7 +281,7 @@
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 40,
           "order": "ascending",
           "sortBy": "index",
           "style": {
@@ -351,13 +353,14 @@
             "#F9D9F9",
             "#DEDAF7"
           ],
-          "title": "Number of conformant spatial data sets (Annex III) - dsv23"
+          "title": "Number of conformant spatial data sets (Annex III) - dsv23",
+          "logAxis": true
         }
       ]
     },
     {
       "title": "Indicator reporting - data set conformity (4)",
-      "height": "480px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -396,7 +399,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of spatial data sets (all annexes) - DSi2"
+          "title": "Conformity of spatial data sets (all annexes) - DSi2",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -404,14 +409,14 @@
           "editable": false,
           "type": "map",
           "loadingEditor": false,
-          "title": "Accessibility of spatial data sets through view and download services - NSi2",
+          "title": "Conformity of spatial data sets (Annex I) - DSi21",
           "queries": {
             "mode": "all",
             "ids": [
               0
             ],
             "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-            "custom": "&fq=indicatorName:\"NSi2\""
+            "custom": "&fq=indicatorName:\"DSi21\""
           },
           "mode": "mean",
           "field": "territory",
@@ -432,13 +437,100 @@
           "size": 100,
           "exclude": [],
           "spyable": true,
-          "index_limit": 0
+          "index_limit": 0,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
     {
       "title": "Indicator reporting - data set conformity (5)",
-      "height": "350px",
+      "height": "450px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 6,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"DSi22\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#dcff37",
+            "#265656"
+          ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "linear",
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of spatial data sets (Annex II) - DSi22",
+          "min_value": 0,
+          "max_value": 1
+        },
+        {
+          "error": false,
+          "span": 6,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"DSi23\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#dcff37",
+            "#265656"
+          ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "linear",
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "title": "Conformity of spatial data sets (Annex III) - DSi23",
+          "min_value": 0,
+          "max_value": 1
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting - data set accessibility (1)",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -473,11 +565,12 @@
           "isLegendDisplayed": true,
           "isZoomControlEnabled": true,
           "normalizeFunction": "linear",
-          "size": 100,
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Accessibility of spatial data sets through view services - NSi21"
+          "title": "Accessibility of spatial data sets through view services - NSi21",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -513,7 +606,56 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Accessibility of spatial data sets through download services - NSi22"
+          "title": "Accessibility of spatial data sets through download services - NSi22",
+          "min_value": 0,
+          "max_value": 1
+        }
+      ]
+    },
+    {
+      "title": "Indicator reporting - data set accessibility (2)",
+      "height": "450px",
+      "editable": false,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 6,
+          "editable": false,
+          "type": "map",
+          "loadingEditor": false,
+          "title": "Accessibility of spatial data sets through view and download services - NSi2",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=documentType:indicator&wt=json&&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
+            "custom": "&fq=indicatorName:\"NSi2\""
+          },
+          "mode": "mean",
+          "field": "territory",
+          "stats_field": "indicatorValue",
+          "decimal_points": 2,
+          "map": "europe",
+          "colors": [
+            "#A0E2E2",
+            "#dcff37",
+            "#265656"
+          ],
+          "backgroundColor": "",
+          "fillColor": "#dedede",
+          "isZoomOnScrollEnabled": false,
+          "isLegendDisplayed": true,
+          "isZoomControlEnabled": true,
+          "normalizeFunction": "linear",
+          "size": 100,
+          "exclude": [],
+          "spyable": true,
+          "index_limit": 0,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     }
