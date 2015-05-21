@@ -201,7 +201,7 @@ function (angular, app, _, $) {
         if ($scope.hits > 0) {
           for (var i=0; i < terms.length; i += 2) {
             // Skip states with zero count to make them greyed out in the map.
-            if (terms[i+1] > 0) {
+            if (terms[i+1] >= 0) {
               // if $scope.data[terms] is undefined, assign the value to it
               // otherwise, we will add the value. This case can happen when
               // the data contains both uppercase and lowercase state letters with
@@ -301,10 +301,13 @@ function (angular, app, _, $) {
                 regions: [regionConfig]
               },
               onRegionTipShow: function(event, el, code){
-                var count = _.isUndefined(scope.data[code]) ? 0 : scope.data[code];
-                el.html(el.html() + " (" +
-                      code + "): " +
-                      count.toFixed(scope.panel.decimal_points));
+
+                var count = _.isUndefined(scope.data[code]) ? null : scope.data[code];
+                if (count) {
+                  el.html(el.html() + " (" +
+                        code + "): " +
+                        count.toFixed(scope.panel.decimal_points));
+                }
               },
               onRegionClick: function(event, code) {
                 var count = _.isUndefined(scope.data[code]) ? 0 : scope.data[code];
