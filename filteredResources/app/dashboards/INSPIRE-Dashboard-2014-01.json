@@ -34,7 +34,7 @@
   },
   "rows": [{
     "title": "Indicator reporting - data set conformity",
-    "height": "350px",
+    "height": "450px",
     "editable": false,
     "collapse": false,
     "collapsable": true,
@@ -60,7 +60,7 @@
         "exclude": [],
         "missing": false,
         "other": false,
-        "size": 10,
+        "size": 40,
         "order": "ascending",
         "sortBy": "index",
         "style": {
@@ -149,7 +149,7 @@
   },
     {
       "title": "Indicator reporting - data set conformity (2)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -175,7 +175,7 @@
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 40,
           "order": "ascending",
           "sortBy": "index",
           "style": {
@@ -253,7 +253,7 @@
     },
     {
       "title": "Indicator reporting - data set conformity (3)",
-      "height": "350px",
+      "height": "450px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -279,7 +279,7 @@
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 40,
           "order": "ascending",
           "sortBy": "index",
           "style": {

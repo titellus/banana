@@ -120,7 +120,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (data sets and services) - mdi1 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -156,7 +158,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (data sets and services) - mdi1 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -192,7 +196,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (data sets and services) - mdi1 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -237,7 +243,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex I) - MDi11 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -273,7 +281,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex I) - MDi11 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -309,7 +319,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex I) - MDi11 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -354,7 +366,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex II) - MDi12 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -390,7 +404,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex II) - MDi12 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -426,7 +442,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex II) - MDi12 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -471,7 +489,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex III) - MDi13 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -507,7 +527,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex III) - MDi13 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -543,7 +565,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Existence of metadata (Annex III) - MDi13 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -608,7 +632,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view services - NSi21 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -644,7 +670,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view services - NSi21 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -680,7 +708,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view services - NSi21 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -725,7 +755,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through download services - NSi22 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -761,7 +793,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through download services - NSi22 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -797,7 +831,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through download services - NSi22 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -842,7 +878,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view and download services - NSi2 - 2012",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -878,7 +916,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view and download services - NSi2 - 2013",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "span": 4,
@@ -914,7 +954,9 @@
           "spyable": true,
           "index_limit": 0,
           "title": "Accessibility of spatial data sets through view and download services - NSi2 - 2014",
-          "show_queries": true
+          "show_queries": true,
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     }

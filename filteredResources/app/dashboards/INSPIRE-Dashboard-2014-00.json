@@ -61,7 +61,7 @@
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 30,
+          "size": 40,
           "order": "ascending",
           "sortBy": "index",
           "style": {
@@ -193,7 +193,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Existence of metadata (data sets and services) - mdi1"
+          "title": "Existence of metadata (data sets and services) - mdi1",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -229,7 +231,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Existence of metadata (Annex I) - MDi11"
+          "title": "Existence of metadata (Annex I) - MDi11",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -274,7 +278,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Existence of metadata (Annex II) - MDi12"
+          "title": "Existence of metadata (Annex II) - MDi12",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -310,7 +316,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Existence of metadata (Annex III) - MDi13"
+          "title": "Existence of metadata (Annex III) - MDi13",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -355,7 +363,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Existence of metadata (spatial data services) - MDi14"
+          "title": "Existence of metadata (spatial data services) - MDi14",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -391,7 +401,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Accessibility of metadata through discovery services"
+          "title": "Accessibility of metadata through discovery services - NSi1",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -447,7 +459,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of metadata (data sets and services) - mdi2"
+          "title": "Conformity of metadata (data sets and services) - mdi2",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -492,7 +506,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of metadata (Annex I) - MDi21"
+          "title": "Conformity of metadata (Annex I) - MDi21",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -528,7 +544,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of metadata (Annex II) - MDi22"
+          "title": "Conformity of metadata (Annex II) - MDi22",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -573,7 +591,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of metadata (Annex III) - MDi23"
+          "title": "Conformity of metadata (Annex III) - MDi23",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -609,7 +629,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of metadata (spatial data services) - MDi24"
+          "title": "Conformity of metadata (spatial data services) - MDi24",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     }
