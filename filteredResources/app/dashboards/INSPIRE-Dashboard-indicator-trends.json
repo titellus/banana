@@ -116,7 +116,8 @@
           "transpose_show": true,
           "transposed": false,
           "show_queries": true,
-          "title": "Monitoring report available per year"
+          "title": "Monitoring report available per year",
+          "sortBy": "index"
         }
       ]
     },
