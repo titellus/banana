@@ -34,7 +34,7 @@
   },
   "rows": [{
     "title": "Indicator reporting - data set conformity",
-    "height": "450px",
+    "height": "550px",
     "editable": false,
     "collapse": false,
     "collapsable": true,
@@ -150,7 +150,7 @@
   },
     {
       "title": "Indicator reporting - data set conformity (2)",
-      "height": "450px",
+      "height": "550px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -255,7 +255,7 @@
     },
     {
       "title": "Indicator reporting - data set conformity (3)",
-      "height": "450px",
+      "height": "550px",
       "editable": false,
       "collapse": false,
       "collapsable": true,

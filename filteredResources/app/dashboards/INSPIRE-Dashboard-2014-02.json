@@ -35,7 +35,7 @@
   "rows": [
     {
       "title": "Indicator reporting - service conformity",
-      "height": "480px",
+      "height": "550px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
@@ -150,7 +150,7 @@
       ]
     },{
       "title": "Indicator reporting - service conformity",
-      "height": "480px",
+      "height": "550px",
       "editable": false,
       "collapse": false,
       "collapsable": true,
