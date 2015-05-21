@@ -42,7 +42,7 @@
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 10,
           "editable": false,
           "type": "terms",
           "loadingEditor": false,
@@ -138,7 +138,7 @@
         },
         {
           "error": false,
-          "span": 4,
+          "span": 2,
           "editable": false,
           "type": "text",
           "loadingEditor": false,
@@ -157,7 +157,7 @@
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 10,
           "editable": false,
           "type": "terms",
           "loadingEditor": false,
