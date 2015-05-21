@@ -122,7 +122,44 @@
       ]
     },
     {
-      "title": "Graph",
+      "title": "Filters",
+      "height": "50px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 6,
+          "editable": true,
+          "spyable": true,
+          "group": [
+            "default"
+          ],
+          "type": "filtering"
+        },
+        {
+          "error": false,
+          "span": 6,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "query",
+          "label": "Search",
+          "history": [
+          ],
+          "remember": 10,
+          "pinned": true,
+          "query": "*:*",
+          "title": "Search",
+          "spyable": true,
+          "def_type": ""
+        }
+      ]
+    },
+    {
+      "title": "Number of data sets and services",
       "height": "750px",
       "editable": true,
       "collapse": false,
@@ -255,129 +292,196 @@
       ]
     },
     {
-      "title": "Filters",
-      "height": "50px",
-      "editable": true,
-      "collapse": true,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "spyable": true,
-          "group": [
-            "default"
-          ],
-          "type": "filtering"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "query",
-          "label": "Search",
-          "history": [
-            "*:*",
-            "territory:de",
-            "territory:fr"
-          ],
-          "remember": 10,
-          "pinned": true,
-          "query": "*:*",
-          "title": "Search",
-          "spyable": true,
-          "def_type": ""
-        }
-      ]
-    },
-    {
-      "title": "Table",
-      "height": "150px",
+      "title": "DSv2",
+      "height": "750px",
       "editable": true,
       "collapse": false,
       "collapsable": true,
-      "panels": [
+      "panels": [{
+        "span": 4,
+        "editable": true,
+        "type": "histogram",
+        "loadingEditor": false,
+        "mode": "values",
+        "time_field": "reportingDate",
+        "queries": {
+          "mode": "all",
+          "ids": [
+            0
+          ],
+          "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000\n",
+          "custom": "&fq=indicatorName:dsv21"
+        },
+        "max_rows": 100000,
+        "value_field": "indicatorValue",
+        "group_field": "territory",
+        "auto_int": false,
+        "resolution": 100,
+        "interval": "1y",
+        "intervals": [
+          "auto",
+          "1s",
+          "1m",
+          "5m",
+          "10m",
+          "30m",
+          "1h",
+          "3h",
+          "12h",
+          "1d",
+          "1w",
+          "1M",
+          "1y"
+        ],
+        "fill": 0,
+        "linewidth": 1,
+        "timezone": "browser",
+        "spyable": true,
+        "zoomlinks": false,
+        "bars": false,
+        "stack": false,
+        "points": true,
+        "lines": true,
+        "legend": true,
+        "x-axis": true,
+        "y-axis": true,
+        "percentage": false,
+        "interactive": true,
+        "options": false,
+        "tooltip": {
+          "value_type": "cumulative",
+          "query_as_alias": false
+        },
+        "title": "Number of conformant spatial data sets (Annex I) - DSv21",
+        "lines_smooth": true,
+        "show_queries": true,
+        "logAxis": true,
+        "sortBy": "index",
+        "order": "ascending"
+      },
         {
-          "span": 12,
+          "span": 4,
           "editable": true,
-          "type": "table",
+          "type": "histogram",
           "loadingEditor": false,
-          "status": "Stable",
+          "mode": "values",
+          "time_field": "reportingDate",
           "queries": {
             "mode": "all",
             "ids": [
               0
             ],
-            "query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc&wt=json&rows=500&fl=_version_,documentType,id,indicatorName,indicatorType,indicatorValue,reportingDate,reportingDateSubmission,reportingYear,territory",
-            "basic_query": "q=*%3A*&df=message&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&sort=territory desc&fl=_version_,documentType,id,indicatorName,indicatorType,indicatorValue,reportingDate,reportingDateSubmission,reportingYear,territory",
-            "custom": "&fq=indicatorName:dsv_num"
+            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000\n",
+            "custom": "&fq=indicatorName:dsv22"
           },
-          "size": 100,
-          "pages": 5,
-          "offset": 0,
-          "sort": [
-            "territory",
-            "desc"
+          "max_rows": 100000,
+          "value_field": "indicatorValue",
+          "group_field": "territory",
+          "auto_int": false,
+          "resolution": 100,
+          "interval": "1y",
+          "intervals": [
+            "auto",
+            "1s",
+            "1m",
+            "5m",
+            "10m",
+            "30m",
+            "1h",
+            "3h",
+            "12h",
+            "1d",
+            "1w",
+            "1M",
+            "1y"
           ],
-          "group": "default",
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "indicatorName",
-            "territory",
-            "reportingYear",
-            "indicatorValue"
-          ],
-          "isLoadingImportantFieldOnly": true,
-          "important_fields": [
-            "_version_",
-            "documentType",
-            "id",
-            "indicatorName",
-            "indicatorType",
-            "indicatorValue",
-            "reportingDate",
-            "reportingDateSubmission",
-            "reportingYear",
-            "territory"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "trimFactor": 300,
-          "normTimes": true,
+          "fill": 0,
+          "linewidth": 1,
+          "timezone": "browser",
           "spyable": true,
-          "saveOption": "json",
-          "exportSize": 500,
-          "exportAll": true,
-          "displayLinkIcon": true,
-          "imageFields": [],
-          "imgFieldWidth": "auto",
-          "imgFieldHeight": "85px",
-          "show_queries": true,
-          "couchbase": {
-            "bucket": "",
-            "document": "",
-            "view": ""
+          "zoomlinks": false,
+          "bars": false,
+          "stack": false,
+          "points": true,
+          "lines": true,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": true,
+          "options": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
           },
-          "overflowItems": [
-            {
-              "key": "scroll",
-              "value": "height"
-            },
-            {
-              "key": "expand",
-              "value": "min-height"
-            }
-          ]
+          "title": "Number of conformant spatial data sets (Annex II) - DSv22",
+          "lines_smooth": true,
+          "show_queries": true,
+          "logAxis": true,
+          "sortBy": "index",
+          "order": "ascending"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "histogram",
+          "loadingEditor": false,
+          "mode": "values",
+          "time_field": "reportingDate",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&df=message&wt=json&rows=100000&fq=reportingDate:[NOW/YEAR-3YEAR%20TO%20NOW/YEAR%2B1YEAR]&fl=reportingDate indicatorValue&group=true&group.field=territory&group.limit=100000\n",
+            "custom": "&fq=indicatorName:dsv23"
+          },
+          "max_rows": 100000,
+          "value_field": "indicatorValue",
+          "group_field": "territory",
+          "auto_int": false,
+          "resolution": 100,
+          "interval": "1y",
+          "intervals": [
+            "auto",
+            "1s",
+            "1m",
+            "5m",
+            "10m",
+            "30m",
+            "1h",
+            "3h",
+            "12h",
+            "1d",
+            "1w",
+            "1M",
+            "1y"
+          ],
+          "fill": 0,
+          "linewidth": 1,
+          "timezone": "browser",
+          "spyable": true,
+          "zoomlinks": false,
+          "bars": false,
+          "stack": false,
+          "points": true,
+          "lines": true,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": true,
+          "options": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "title": "Number of conformant spatial data sets (Annex III) - DSv23",
+          "lines_smooth": true,
+          "show_queries": true,
+          "logAxis": true,
+          "sortBy": "index",
+          "order": "ascending"
         }
       ]
     }

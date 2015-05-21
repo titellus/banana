@@ -144,7 +144,7 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* Network services availability and conformity\n\n\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Network services availability and conformity) |\n[2013](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Network services availability and conformity) |\n2014",
           "style": {}
         }
       ]
@@ -190,7 +190,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of view network services - nsi42"
+          "title": "Conformity of view network services - nsi42",
+          "min_value": 0,
+          "max_value": 1
         },
         {
           "error": false,
@@ -226,7 +228,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of discovery network services - nsi41"
+          "title": "Conformity of discovery network services - nsi41",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     },
@@ -271,7 +275,9 @@
           "exclude": [],
           "spyable": true,
           "index_limit": 0,
-          "title": "Conformity of download network services - nsi43"
+          "title": "Conformity of download network services - nsi43",
+          "min_value": 0,
+          "max_value": 1
         }
       ]
     }
