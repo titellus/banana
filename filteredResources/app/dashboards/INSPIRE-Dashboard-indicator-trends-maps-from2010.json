@@ -54,26 +54,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Existence of metadata (data sets and services) - mdi1",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Existence of metadata (data sets and services) - mdi1",
       "height": "350px",
       "editable": false,
@@ -267,26 +247,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Existence of metadata (Annex I) - MDi11",
-          "style": {}
         }
       ]
     },
@@ -488,26 +448,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Existence of metadata (Annex II) - MDi12",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Existence of metadata (Annex II) - MDi12",
       "height": "350px",
       "editable": false,
@@ -705,26 +645,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Existence of metadata (Annex III) - MDi13",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Existence of metadata (Annex III) - MDi13",
       "height": "350px",
       "editable": false,
@@ -918,26 +838,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Existence of metadata (spatial data services) - MDi14",
-          "style": {}
         }
       ]
     },
@@ -1159,26 +1059,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of metadata (data sets and services) - mdi2",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Conformity of metadata (data sets and services) - mdi2",
       "height": "350px",
       "editable": false,
@@ -1372,26 +1252,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of metadata (Annex I) - MDi21",
-          "style": {}
         }
       ]
     },
@@ -1593,26 +1453,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of metadata (Annex II) - MDi22",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Conformity of metadata (Annex II) - MDi22",
       "height": "350px",
       "editable": false,
@@ -1806,26 +1646,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of metadata (Annex III) - MDi23",
-          "style": {}
         }
       ]
     },
@@ -2025,26 +1845,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of metadata (spatial data services) - MDi24",
-          "style": {}
         }
       ]
     },
@@ -2268,26 +2068,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Accessibility of metadata through discovery services - NSi1",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Accessibility of metadata through discovery services - NSi1",
       "height": "350px",
       "editable": false,
@@ -2295,80 +2075,6 @@
       "collapsable": true,
       "panels": [
         {
-          "span": 2,
-          "editable": false,
-          "type": "map",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=+documentType:indicator&wt=json&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-            "custom": "&fq=%2BindicatorName:\"NSi1\"+%2BreportingYear:2010"
-          },
-          "mode": "mean",
-          "field": "territory",
-          "stats_field": "indicatorValue",
-          "decimal_points": 2,
-          "map": "europe",
-          "colors": [
-            "#A0E2E2",
-            "#dcff37",
-            "#265656"
-          ],
-          "backgroundColor": "",
-          "fillColor": "#dedede",
-          "isZoomOnScrollEnabled": false,
-          "isLegendDisplayed": false,
-          "isZoomControlEnabled": false,
-          "normalizeFunction": "linear",
-          "size": 100,
-          "exclude": [],
-          "spyable": false,
-          "index_limit": 0,
-          "title": "2012",
-          "show_queries": true,
-          "min_value": 0,
-          "max_value": 1
-        },{
-          "span": 2,
-          "editable": false,
-          "type": "map",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=+documentType:indicator&wt=json&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-            "custom": "&fq=%2BindicatorName:\"NSi1\"+%2BreportingYear:2011"
-          },
-          "mode": "mean",
-          "field": "territory",
-          "stats_field": "indicatorValue",
-          "decimal_points": 2,
-          "map": "europe",
-          "colors": [
-            "#A0E2E2",
-            "#dcff37",
-            "#265656"
-          ],
-          "backgroundColor": "",
-          "fillColor": "#dedede",
-          "isZoomOnScrollEnabled": false,
-          "isLegendDisplayed": false,
-          "isZoomControlEnabled": false,
-          "normalizeFunction": "linear",
-          "size": 100,
-          "exclude": [],
-          "spyable": false,
-          "index_limit": 0,
-          "title": "2012",
-          "show_queries": true,
-          "min_value": 0,
-          "max_value": 1
-        },{
           "span": 2,
           "editable": false,
           "type": "map",
@@ -2499,26 +2205,6 @@
           "status": "Stable",
           "mode": "markdown",
           "content": "# Conformity of spatial data sets",
-          "style": {}
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of spatial data sets (all annexes) - DSi2",
           "style": {}
         }
       ]
@@ -2721,26 +2407,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of spatial data sets (Annex I) - DSi21",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Conformity of spatial data sets (Annex I) - DSi21",
       "height": "350px",
       "editable": false,
@@ -2748,80 +2414,6 @@
       "collapsable": true,
       "panels": [
         {
-          "span": 2,
-          "editable": false,
-          "type": "map",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=+documentType:indicator&wt=json&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-            "custom": "&fq=%2BindicatorName:\"DSi21\"+%2BreportingYear:2010"
-          },
-          "mode": "mean",
-          "field": "territory",
-          "stats_field": "indicatorValue",
-          "decimal_points": 2,
-          "map": "europe",
-          "colors": [
-            "#A0E2E2",
-            "#dcff37",
-            "#265656"
-          ],
-          "backgroundColor": "",
-          "fillColor": "#dedede",
-          "isZoomOnScrollEnabled": false,
-          "isLegendDisplayed": false,
-          "isZoomControlEnabled": false,
-          "normalizeFunction": "linear",
-          "size": 100,
-          "exclude": [],
-          "spyable": false,
-          "index_limit": 0,
-          "title": "2012",
-          "show_queries": true,
-          "min_value": 0,
-          "max_value": 1
-        },{
-          "span": 2,
-          "editable": false,
-          "type": "map",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=+documentType:indicator&wt=json&rows=0&stats=true&stats.facet=territory&stats.field=indicatorValue",
-            "custom": "&fq=%2BindicatorName:\"DSi21\"+%2BreportingYear:2011"
-          },
-          "mode": "mean",
-          "field": "territory",
-          "stats_field": "indicatorValue",
-          "decimal_points": 2,
-          "map": "europe",
-          "colors": [
-            "#A0E2E2",
-            "#dcff37",
-            "#265656"
-          ],
-          "backgroundColor": "",
-          "fillColor": "#dedede",
-          "isZoomOnScrollEnabled": false,
-          "isLegendDisplayed": false,
-          "isZoomControlEnabled": false,
-          "normalizeFunction": "linear",
-          "size": 100,
-          "exclude": [],
-          "spyable": false,
-          "index_limit": 0,
-          "title": "2012",
-          "show_queries": true,
-          "min_value": 0,
-          "max_value": 1
-        },{
           "span": 2,
           "editable": false,
           "type": "map",
@@ -2934,26 +2526,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of spatial data sets (Annex II) - DSi22",
-          "style": {}
         }
       ]
     },
@@ -3151,26 +2723,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of spatial data sets (Annex III) - DSi23",
-          "style": {}
         }
       ]
     },
@@ -3392,26 +2944,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Accessibility of spatial data sets through view services - NSi21",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Accessibility of spatial data sets through view services - NSi21",
       "height": "350px",
       "editable": false,
@@ -3609,26 +3141,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Accessibility of spatial data sets through download services - NSi22",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Accessibility of spatial data sets through download services - NSi22",
       "height": "350px",
       "editable": false,
@@ -3822,26 +3334,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Accessibility of spatial data sets through view and download services - NSi2",
-          "style": {}
         }
       ]
     },
@@ -4063,26 +3555,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of discovery services - NSi41",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Conformity of discovery services - NSi41",
       "height": "350px",
       "editable": false,
@@ -4280,26 +3752,6 @@
       ]
     },
     {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of view services - NSi42",
-          "style": {}
-        }
-      ]
-    },
-    {
       "title": "Conformity of view services - NSi42",
       "height": "350px",
       "editable": false,
@@ -4493,26 +3945,6 @@
           "show_queries": true,
           "min_value": 0,
           "max_value": 1
-        }
-      ]
-    },
-    {
-      "title": "",
-      "height": "30px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "error": false,
-          "span": 12,
-          "editable": false,
-          "type": "text",
-          "loadingEditor": false,
-          "status": "Stable",
-          "mode": "markdown",
-          "content": "* Conformity of download services - NSi43",
-          "style": {}
         }
       ]
     },

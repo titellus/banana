@@ -38,7 +38,7 @@
       "height": "480px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -74,7 +74,7 @@
           "chart": "bar",
           "counter_pos": "right",
           "lastColor": "",
-          "spyable": true,
+          "spyable": false,
           "chartColors": [
             "#7EB26D",
             "#EAB839",
@@ -147,17 +147,17 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* Metadata availability and conformity\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)\n\n\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Metadata availability and conformity) |\n[2013](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity) |\n2014",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* Metadata availability and conformity\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Spatial data sets availability and conformity)\n\n* [Network services availability and conformity](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)\n\n\n[2010](#/dashboard/solr/INSPIRE Reporting 2011 - Ref. year 2010 - Metadata availability and conformity) |\n[2011](#/dashboard/solr/INSPIRE Reporting 2012 - Ref. year 2011 - Metadata availability and conformity) |\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Metadata availability and conformity) |\n[2013](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity) |\n2014",
           "style": {}
         }
       ]
     },
     {
       "title": "Indicator reporting (2)",
-      "height": "450px",
+      "height": "550px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -191,7 +191,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Existence of metadata (data sets and services) - mdi1",
           "min_value": 0,
@@ -229,7 +229,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Existence of metadata (Annex I) - MDi11",
           "min_value": 0,
@@ -242,7 +242,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -276,7 +276,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Existence of metadata (Annex II) - MDi12",
           "min_value": 0,
@@ -314,7 +314,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Existence of metadata (Annex III) - MDi13",
           "min_value": 0,
@@ -327,7 +327,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -361,7 +361,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Existence of metadata (spatial data services) - MDi14",
           "min_value": 0,
@@ -399,7 +399,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Accessibility of metadata through discovery services - NSi1",
           "min_value": 0,
@@ -412,7 +412,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -457,7 +457,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of metadata (data sets and services) - mdi2",
           "min_value": 0,
@@ -470,7 +470,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -504,7 +504,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of metadata (Annex I) - MDi21",
           "min_value": 0,
@@ -542,7 +542,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of metadata (Annex II) - MDi22",
           "min_value": 0,
@@ -555,7 +555,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -589,7 +589,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of metadata (Annex III) - MDi23",
           "min_value": 0,
@@ -627,7 +627,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of metadata (spatial data services) - MDi24",
           "min_value": 0,

@@ -81,7 +81,7 @@
             "5y",
             "6y"
           ],
-          "timespan": "3y",
+          "timespan": "5y",
           "timefield": "reportingDate",
           "timeformat": "",
           "refresh": {
