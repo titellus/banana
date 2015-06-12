@@ -38,7 +38,7 @@
       "height": "550px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -74,7 +74,7 @@
           "chart": "bar",
           "counter_pos": "right",
           "lastColor": "",
-          "spyable": true,
+          "spyable": false,
           "chartColors": [
             "#7EB26D",
             "#EAB839",
@@ -144,7 +144,7 @@
           "loadingEditor": false,
           "status": "Stable",
           "mode": "markdown",
-          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Spatial data sets availability and conformity)\n\n* Network services availability and conformity\n\n\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Network services availability and conformity) |\n2013 |\n[2014](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)",
+          "content": "This section describes the existence of metadata records on data sets and services with statistics on each Annex.\n\n* [Metadata availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Metadata availability and conformity)\n\n* [Spatial data sets availability and conformity](#/dashboard/solr/INSPIRE Reporting 2014 - Ref. year 2013 - Spatial data sets availability and conformity)\n\n* Network services availability and conformity\n\n\n[2010](#/dashboard/solr/INSPIRE Reporting 2011 - Ref. year 2010 - Network services availability and conformity) |\n[2011](#/dashboard/solr/INSPIRE Reporting 2012 - Ref. year 2011 - Network services availability and conformity) |\n[2012](#/dashboard/solr/INSPIRE Reporting 2013 - Ref. year 2012 - Network services availability and conformity) |\n2013 |\n[2014](#/dashboard/solr/INSPIRE Reporting 2015 - Ref. year 2014 - Network services availability and conformity)",
           "style": {}
         }
       ]
@@ -153,7 +153,7 @@
       "height": "550px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -189,7 +189,7 @@
           "chart": "bar",
           "counter_pos": "right",
           "lastColor": "",
-          "spyable": true,
+          "spyable": false,
           "chartColors": [
             "#7EB26D",
             "#EAB839",
@@ -258,7 +258,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -292,7 +292,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of view network services - nsi42",
           "min_value": 0,
@@ -330,7 +330,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of discovery network services - nsi41",
           "min_value": 0,
@@ -343,7 +343,7 @@
       "height": "450px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -377,7 +377,7 @@
           "normalizeFunction": "linear",
           "size": 100,
           "exclude": [],
-          "spyable": true,
+          "spyable": false,
           "index_limit": 0,
           "title": "Conformity of download network services - nsi43",
           "min_value": 0,
@@ -405,7 +405,7 @@
     "save_temp_ttl": "30d",
     "load_gist": false,
     "load_elasticsearch": true,
-    "load_elasticsearch_size": 20,
+    "load_elasticsearch_size": 30,
     "load_local": true,
     "hide": false,
     "dropdown_collections": false
