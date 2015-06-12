@@ -505,7 +505,7 @@
     "save_temp_ttl": "30d",
     "load_gist": false,
     "load_elasticsearch": true,
-    "load_elasticsearch_size": 20,
+    "load_elasticsearch_size": 30,
     "load_local": true,
     "hide": false,
     "dropdown_collections": false

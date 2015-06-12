@@ -38,7 +38,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -58,7 +58,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -255,7 +255,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -452,7 +452,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -649,7 +649,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -846,7 +846,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -1043,7 +1043,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -1063,7 +1063,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -1260,7 +1260,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -1457,7 +1457,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -1654,7 +1654,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -1853,7 +1853,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2052,7 +2052,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -2072,7 +2072,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2194,7 +2194,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -2214,7 +2214,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2411,7 +2411,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2534,7 +2534,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2731,7 +2731,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -2928,7 +2928,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -2948,7 +2948,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -3145,7 +3145,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -3342,7 +3342,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -3539,7 +3539,7 @@
       "height": "50px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "error": false,
@@ -3559,7 +3559,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -3756,7 +3756,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -3953,7 +3953,7 @@
       "height": "350px",
       "editable": false,
       "collapse": false,
-      "collapsable": true,
+      "collapsable": false,
       "panels": [
         {
           "span": 2,
@@ -4165,7 +4165,7 @@
     "save_temp_ttl": "30d",
     "load_gist": true,
     "load_elasticsearch": true,
-    "load_elasticsearch_size": 20,
+    "load_elasticsearch_size": 30,
     "load_local": true,
     "hide": false,
     "dropdown_collections": false
