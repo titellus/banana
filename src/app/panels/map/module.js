@@ -277,6 +277,7 @@ function (angular, app, _, $) {
           elem.text('');
           //$('.jvectormap-zoomin,.jvectormap-zoomout,.jvectormap-label').remove();
           require(['./panels/map/lib/map.'+scope.panel.map], function () {
+
             var regionConfig = {
               values: scope.data,
               scale: scope.panel.colors,
