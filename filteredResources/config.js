@@ -32,7 +32,7 @@ function (Settings) {
      * @type {String}
      */
     solr: "${webapp.rootUrl}",
-    solr_core: "data",
+    solr_core: "${solr.core.data}",
     timefield: 'event_timestamp',
 
     /**
@@ -47,7 +47,7 @@ function (Settings) {
      * internal to banana.
      * @type {String}
      */
-    banana_index: "dashboard",
+    banana_index: "${solr.core.dashboard}",
 
     /**
      * The default settings will use /admin/luke API to retrieve all fields from Solr including

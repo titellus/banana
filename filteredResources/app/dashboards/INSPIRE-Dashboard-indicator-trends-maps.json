@@ -2763,7 +2763,7 @@
   },
   "solr": {
     "server": "${webapp.rootUrl}",
-    "core_name": "data",
+    "core_name": "${solr.core.data}",
     "core_list": [
       "dashboard",
       "data"
