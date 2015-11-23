@@ -457,14 +457,23 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "chartColorPalette": [],
-          "colorMode": "list",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#00ff00"
+            },
+            {
+              "label": "false",
+              "color": "#ff0000"
+            }
+          ],
+          "colorMode": "listWithValues",
           "queries": {
             "mode": "all",
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:monitoringMetadata&wt=json&rows=0&fq=reportingYear:\"2013\"&fq=territory:\"AT\"&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=true&f.isAboveThreshold.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:monitoringMetadata&wt=json&rows=0&facet=true&facet.field=isAboveThreshold&facet.limit=10&facet.missing=true&f.isAboveThreshold.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -555,14 +564,23 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "chartColorPalette": [],
-          "colorMode": "list",
+          "chartColorPalette": [
+            {
+              "label": "true",
+              "color": "#00ff00"
+            },
+            {
+              "label": "false",
+              "color": "#ff0000"
+            }
+          ],
+          "colorMode": "listWithValues",
           "queries": {
             "mode": "all",
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=documentType:monitoringMetadata&wt=json&rows=0&fq=reportingYear:\"2013\"&fq=territory:\"AT\"&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=true&f.inspireConformResource.facet.sort=count",
+            "query": "q=*%3A*&fq=documentType:monitoringMetadata&wt=json&rows=0&facet=true&facet.field=inspireConformResource&facet.limit=10&facet.missing=true&f.inspireConformResource.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
