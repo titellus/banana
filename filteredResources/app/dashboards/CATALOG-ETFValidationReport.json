@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "ETF Validation report",
   "services": {
     "query": {
@@ -81,7 +81,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=0\n",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -128,7 +128,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -254,7 +254,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=20\n",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=20\n",
             "custom": ""
           },
           "max_rows": 100000,
@@ -296,7 +296,7 @@
           "range_field": "etfCompletenessIndicator",
           "minimum": 0.1,
           "maximum": 100,
-          "error": false
+          "error": "In count mode a stats field must be specified"
         },
         {
           "span": 4,
@@ -309,8 +309,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&wt=json",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&wt=json",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid",
             "custom": ""
           },
           "group": "default",
@@ -372,8 +372,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=5000",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&fq=etfCompletenessIndicator:[0 TO 100]"
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=5000",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]"
           },
           "field_list": true,
           "status": "Stable",
@@ -415,7 +415,10 @@
               "key": "expand",
               "value": "min-height"
             }
-          ]
+          ],
+          "enableHyperlink": true,
+          "hyperlinkColumnForURI": "etfValidReportUrl",
+          "hyperlinkColumnHeader": "Report"
         },
         {
           "span": 4,
@@ -427,7 +430,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType%3Ametadata+%2BresourceType%3Aservice&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -543,14 +546,15 @@
     "load_local": true,
     "hide": false,
     "dropdown_collections": false
-  },  "solr": {
+  },
+  "solr": {
     "server": "/${solr.webapp.name}/",
     "core_name": "${solr.core.data}",
     "core_list": [
       "dashboard",
       "data"
     ],
-    "global_params": "&fq=documentType:monitoringMetadata",
+    "global_params": "&fq=%2BdocumentType:monitoringMetadata %2BresourceType:service",
     "zkHost": "http://localhost:9998/znodes/v1/",
     "server_type": "solr_server"
   },
