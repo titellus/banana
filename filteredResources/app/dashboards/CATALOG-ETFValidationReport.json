@@ -554,7 +554,7 @@
       "dashboard",
       "data"
     ],
-    "global_params": "&fq=%2BdocumentType:monitoringMetadata %2BresourceType:service",
+    "global_params": "&fq=%2BdocumentType:metadata %2BresourceType:service",
     "zkHost": "http://localhost:9998/znodes/v1/",
     "server_type": "solr_server"
   },
