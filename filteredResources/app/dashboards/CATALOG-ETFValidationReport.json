@@ -316,8 +316,7 @@
           "title": "%age of failing mandatory tests",
           "range_field": "etfCompletenessIndicator",
           "minimum": 0.1,
-          "maximum": 100.1,
-          "error": "In count mode a stats field must be specified"
+          "maximum": 100.1
         },
         {
           "span": 4,
@@ -370,10 +369,9 @@
           "showChart": true,
           "show_queries": true,
           "title": "%age of failing optional tests",
-          "range_field": "etfCompletenessIndicator",
+          "range_field": "etfCompletenessIndicatorOptional",
           "minimum": 0.1,
-          "maximum": 100,
-          "error": "In count mode a stats field must be specified"
+          "maximum": 100
         },
         {
           "span": 4,
@@ -386,8 +384,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&wt=json",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicatorOptional:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicatorOptional&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&wt=json",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicatorOptional:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicatorOptional&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex",
             "custom": ""
           },
           "group": "default",
@@ -396,7 +394,7 @@
           },
           "overflow": "min-height",
           "fields": [
-            "etfCompletenessIndicator",
+            "etfCompletenessIndicatorOptional",
             "territory",
             "inspireServiceType",
             "etfIsValid",
