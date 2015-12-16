@@ -16,6 +16,8 @@ define([
   'angular-strap',
   'angular-strap-tpl',
   'angular-dragdrop',
+  'angular-translate',
+  'angular-translate-loader-static-files',
   'extend-jquery'
 ],
 function (angular, $, _, appLevelRequire) {
@@ -62,7 +64,7 @@ function (angular, $, _, appLevelRequire) {
     }
   };
 
-  app.config(function ($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
+  app.config(function ($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $translateProvider) {
     $routeProvider
       .when('/dashboard', {
         templateUrl: 'app/partials/dashboard.html',
@@ -82,6 +84,17 @@ function (angular, $, _, appLevelRequire) {
     register_fns.factory    = $provide.factory;
     register_fns.service    = $provide.service;
     register_fns.filter     = $filterProvider.register;
+
+    // Set translation provider to load JSON file
+    $translateProvider.useStaticFilesLoader({files: [{
+      prefix: 'app/i18n/',
+      suffix: '.json'
+    },{
+      prefix: '../assets/i18n/',
+      suffix: '.json'
+    }]});
+    $translateProvider.preferredLanguage('en');
+
   });
 
   // $http requests in Angular 1.0.x include the 'X-Requested-With' header
@@ -104,6 +117,7 @@ function (angular, $, _, appLevelRequire) {
     'ngRoute',
     'ngSanitize',
     'ngDragDrop',
+    'pascalprecht.translate',
     'kibana'
   ];
 
@@ -135,7 +149,8 @@ function (angular, $, _, appLevelRequire) {
       .ready(function() {
         $('body').attr('ng-controller', 'DashCtrl');
         angular.bootstrap(document, apps_deps)
-          .invoke(['$rootScope', '$location', function ($rootScope, $location) {
+          .invoke(['$rootScope', '$location',
+            function ($rootScope, $location) {
             _.each(pre_boot_modules, function (module) {
               _.extend(module, register_fns);
             });
@@ -143,6 +158,7 @@ function (angular, $, _, appLevelRequire) {
 
             $rootScope.noHeader = $location.search().noHeader !== undefined;
             $rootScope.readonly = $location.search().readonly !== undefined;
+
 
             $rootScope.requireContext = appLevelRequire;
             $rootScope.require = function (deps, fn) {

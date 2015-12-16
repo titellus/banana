@@ -15,6 +15,29 @@ function (angular, config, _) {
       index: 0
     };
 
+    // FIXME : this is duplicated from app.module.js
+    $scope.navLinks = [{
+      id: 'home',
+      icon: 'glyphicon-home',
+      url: '../#/'
+    }, {
+      id: 'dashboard',
+      icon: 'glyphicon-stats',
+      url: 'dashboard2/#/dashboard/solr/INSPIRE%20Indicator%20trends'
+    }, {
+      id: 'monitoring',
+      icon: 'glyphicon-list-alt',
+      url: '../#/monitoring/manage'
+    }, {
+      id: 'harvesting',
+      icon: 'glyphicon-download-alt',
+      url: '../#/harvesting'
+    }, {
+      id: 'admin',
+      icon: 'glyphicon-cog',
+      url: '/solr/' // TODO: it may be a different URL
+    }];
+
     // For moving stuff around the dashboard. Needs better names
     $scope.panelMove = panelMove;
     $scope.panelMoveDrop = panelMove.onDrop;

@@ -20,6 +20,8 @@ require.config({
     angular:                  '../bower_components/angular/angular',
     'angular-route':          '../bower_components/angular-route/angular-route',
     'angular-dragdrop':       '../bower_components/angular-dragdrop/src/angular-dragdrop',
+    'angular-translate':      '../bower_components/angular-translate/angular-translate',
+    'angular-translate-loader-static-files':      '../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files',
     'angular-strap':          '../bower_components/angular-strap/dist/angular-strap',
     'angular-strap-tpl':      '../bower_components/angular-strap/dist/angular-strap.tpl.min',
     'angular-animate':        '../bower_components/angular-animate/angular-animate',
@@ -91,6 +93,8 @@ require.config({
     'angular-resource':     ['angular'],
     'angular-route':        ['angular'],
     'angular-touch':        ['angular'],
+    'angular-translate':    ['angular'],
+    'angular-translate-loader-static-files':    ['angular-translate'],
 
     'angular-strap':        ['angular', 'angular-animate', 'bootstrap', 'timepicker', 'datepicker'],
     'angular-strap-tpl':    ['angular', 'angular-strap'],
