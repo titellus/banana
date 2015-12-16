@@ -236,6 +236,27 @@
       ]
     },
     {
+      "title": "Completeness Indicator",
+      "height": "80px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": false,
+      "panels": [
+        {
+          "error": false,
+          "span": 8,
+          "editable": true,
+          "type": "text",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "html",
+          "content": "<p>Note that the completeness indicator currently weighs all tests equally. Please, consider that failures in some tests may have much more impact as failures in other tests. So use the completeness Indicator with caution</p>",
+          "style": {},
+          "title": "Completeness indicator"
+        }
+      ]
+    },
+    {
       "title": "Statistics",
       "height": "350px",
       "editable": true,
@@ -243,7 +264,7 @@
       "collapsable": true,
       "panels": [
         {
-          "span": 8,
+          "span": 4,
           "editable": true,
           "type": "rangeFacet",
           "loadingEditor": false,
@@ -254,7 +275,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=20\n",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=10\n",
             "custom": ""
           },
           "max_rows": 100000,
@@ -264,7 +285,7 @@
           "linewidth": 3,
           "auto_int": false,
           "resolution": 5,
-          "interval": "20",
+          "interval": "10",
           "resolutions": [
             5,
             10,
@@ -292,7 +313,63 @@
           },
           "showChart": true,
           "show_queries": true,
-          "title": "%age of failing tests",
+          "title": "%age of failing mandatory tests",
+          "range_field": "etfCompletenessIndicator",
+          "minimum": 0.1,
+          "maximum": 100.1,
+          "error": "In count mode a stats field must be specified"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "rangeFacet",
+          "loadingEditor": false,
+          "mode": "count",
+          "time_field": "timestamp",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=10\n",
+            "custom": ""
+          },
+          "max_rows": 100000,
+          "value_field": null,
+          "group_field": null,
+          "fill": 0,
+          "linewidth": 3,
+          "auto_int": false,
+          "resolution": 100,
+          "interval": "10",
+          "resolutions": [
+            5,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "spyable": true,
+          "zoomlinks": false,
+          "bars": true,
+          "stack": true,
+          "points": false,
+          "lines": false,
+          "lines_smooth": false,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": false,
+          "options": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "showChart": true,
+          "show_queries": true,
+          "title": "%age of failing optional tests",
           "range_field": "etfCompletenessIndicator",
           "minimum": 0.1,
           "maximum": 100,
@@ -309,8 +386,8 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&wt=json",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&wt=json",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicator&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex",
             "custom": ""
           },
           "group": "default",
@@ -322,11 +399,13 @@
             "etfCompletenessIndicator",
             "territory",
             "inspireServiceType",
-            "etfIsValid"
+            "etfIsValid",
+            "OrgForResource",
+            "inspireAnnex"
           ],
           "field_list": true,
           "spyable": true,
-          "facet_limit": 10,
+          "facet_limit": 30,
           "foundResults": true,
           "header_title": "Limit Your Search",
           "toggle_element": null,
@@ -360,10 +439,12 @@
           "fields": [
             "resourceTitle",
             "etfCompletenessIndicator",
-            "etfIsValid"
+            "etfIsValid",
+            "OrgForResource",
+            "inspireConformResource"
           ],
           "highlight": [],
-          "sortable": false,
+          "sortable": true,
           "header": true,
           "paging": true,
           "spyable": true,
@@ -372,14 +453,14 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=5000",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]"
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc&wt=json&rows=5000",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc"
           },
           "field_list": true,
           "status": "Stable",
           "trimFactor": 300,
           "normTimes": true,
-          "title": "Events",
+          "title": "Service metadata records",
           "saveOption": "json",
           "exportSize": 5000,
           "exportAll": true,
@@ -388,7 +469,7 @@
           "imgFieldWidth": "auto",
           "imgFieldHeight": "85px",
           "sort": [
-            "event_timestamp",
+            "etfCompletenessIndicator",
             "desc"
           ],
           "isLoadingImportantFieldOnly": false,
@@ -398,7 +479,10 @@
             "etfValidDate",
             "resourceTitle",
             "resourceType",
-            "OrgForResource"
+            "OrgForResource",
+            "etfValidReport",
+            "etfValidReportUrl",
+            "inspireConformResource"
           ],
           "show_queries": true,
           "couchbase": {
