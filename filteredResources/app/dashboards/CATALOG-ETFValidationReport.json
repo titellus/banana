@@ -110,7 +110,7 @@
       "panels": [
         {
           "error": false,
-          "span": 5,
+          "span": 6,
           "editable": true,
           "spyable": true,
           "group": [
@@ -119,7 +119,7 @@
           "type": "filtering"
         },
         {
-          "span": 7,
+          "span": 3,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -151,7 +151,7 @@
           "arrangement": "horizontal",
           "chart": "pie",
           "counter_pos": "above",
-          "lastColor": "",
+          "lastColor": "#009e03",
           "spyable": true,
           "show_queries": true,
           "colorMode": "listWithValues",
@@ -231,7 +231,122 @@
               "color": "#FFFFFF"
             }
           ],
-          "title": "ETF validation report results"
+          "title": "ETF Mandatory"
+        },
+        {
+          "span": 3,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValidOptional&facet.limit=10&facet.missing=true&f.etfIsValidOptional.facet.sort=count",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "etfIsValidOptional",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "above",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "colorMode": "listWithValues",
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "chartColorPalette": [
+            {
+              "label": "false",
+              "color": "#ff8000"
+            },
+            {
+              "label": "true",
+              "color": "#009e03"
+            },
+            {
+              "label": "Missing field",
+              "color": "#c2c2c2"
+            },
+            {
+              "label": "Other values",
+              "color": "#FFFFFF"
+            }
+          ],
+          "title": "ETF Optional"
         }
       ]
     },
