@@ -363,7 +363,7 @@
             "etfIsValid"
           ],
           "highlight": [],
-          "sortable": false,
+          "sortable": true,
           "header": true,
           "paging": true,
           "spyable": true,
@@ -372,10 +372,10 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=5000",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]"
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc&wt=json&rows=5000",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc"
           },
-          "field_list": true,
+          "field_list": false,
           "status": "Stable",
           "trimFactor": 300,
           "normTimes": true,
@@ -388,7 +388,7 @@
           "imgFieldWidth": "auto",
           "imgFieldHeight": "85px",
           "sort": [
-            "event_timestamp",
+            "etfCompletenessIndicator",
             "desc"
           ],
           "isLoadingImportantFieldOnly": false,
