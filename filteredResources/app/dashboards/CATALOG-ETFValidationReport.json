@@ -24,23 +24,34 @@
     },
     "filter": {
       "idQueue": [
-        1,
-        2
+        2,
+        3
       ],
       "list": {
         "0": {
           "type": "range",
-          "from": 0,
+          "from": -1,
           "to": 100,
           "field": "etfCompletenessIndicator",
           "mandate": "must",
           "active": true,
           "alias": "",
           "id": 0
+        },
+        "1": {
+          "type": "range",
+          "from": -1,
+          "to": 100,
+          "field": "etfCompletenessIndicatorOptional",
+          "mandate": "must",
+          "active": true,
+          "alias": "",
+          "id": 1
         }
       },
       "ids": [
-        0
+        0,
+        1
       ]
     }
   },
@@ -81,7 +92,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&wt=json&rows=0\n",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&wt=json&rows=0\n",
             "basic_query": "",
             "custom": ""
           },
@@ -128,7 +139,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -243,7 +254,7 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValidOptional&facet.limit=10&facet.missing=true&f.etfIsValidOptional.facet.sort=count",
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=etfIsValidOptional&facet.limit=10&facet.missing=true&f.etfIsValidOptional.facet.sort=count",
             "custom": ""
           },
           "mode": "count",
@@ -352,14 +363,14 @@
     },
     {
       "title": "Completeness Indicator",
-      "height": "80px",
+      "height": "280px",
       "editable": true,
       "collapse": false,
       "collapsable": false,
       "panels": [
         {
           "error": false,
-          "span": 8,
+          "span": 2,
           "editable": true,
           "type": "text",
           "loadingEditor": false,
@@ -368,257 +379,9 @@
           "content": "<p>Note that the completeness indicator currently weighs all tests equally. Please, consider that failures in some tests may have much more impact as failures in other tests. So use the completeness Indicator with caution</p>",
           "style": {},
           "title": "Completeness indicator"
-        }
-      ]
-    },
-    {
-      "title": "Statistics",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 4,
-          "editable": true,
-          "type": "rangeFacet",
-          "loadingEditor": false,
-          "mode": "count",
-          "time_field": "timestamp",
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=10\n",
-            "custom": ""
-          },
-          "max_rows": 100000,
-          "value_field": null,
-          "group_field": null,
-          "fill": 0,
-          "linewidth": 3,
-          "auto_int": false,
-          "resolution": 5,
-          "interval": "10",
-          "resolutions": [
-            5,
-            10,
-            25,
-            50,
-            75,
-            100
-          ],
-          "spyable": true,
-          "zoomlinks": false,
-          "bars": true,
-          "stack": true,
-          "points": false,
-          "lines": false,
-          "lines_smooth": false,
-          "legend": true,
-          "x-axis": true,
-          "y-axis": true,
-          "percentage": false,
-          "interactive": false,
-          "options": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": false
-          },
-          "showChart": true,
-          "show_queries": true,
-          "title": "%age of failing mandatory tests",
-          "range_field": "etfCompletenessIndicator",
-          "minimum": 0.1,
-          "maximum": 100.1
         },
         {
-          "span": 4,
-          "editable": true,
-          "type": "rangeFacet",
-          "loadingEditor": false,
-          "mode": "count",
-          "time_field": "timestamp",
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=0.1&facet.range.end=101&facet.range.gap=10\n",
-            "custom": ""
-          },
-          "max_rows": 100000,
-          "value_field": null,
-          "group_field": null,
-          "fill": 0,
-          "linewidth": 3,
-          "auto_int": false,
-          "resolution": 100,
-          "interval": "10",
-          "resolutions": [
-            5,
-            10,
-            25,
-            50,
-            75,
-            100
-          ],
-          "spyable": true,
-          "zoomlinks": false,
-          "bars": true,
-          "stack": true,
-          "points": false,
-          "lines": false,
-          "lines_smooth": false,
-          "legend": true,
-          "x-axis": true,
-          "y-axis": true,
-          "percentage": false,
-          "interactive": false,
-          "options": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": false
-          },
-          "showChart": true,
-          "show_queries": true,
-          "title": "%age of failing optional tests",
-          "range_field": "etfCompletenessIndicatorOptional",
-          "minimum": 0.1,
-          "maximum": 100
-        },
-        {
-          "span": 4,
-          "editable": true,
-          "type": "facet",
-          "loadingEditor": false,
-          "status": "Stable",
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicatorOptional:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicatorOptional&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&wt=json",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicatorOptional:[0 TO 100]&facet=true&facet.field=etfCompletenessIndicatorOptional&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex",
-            "custom": ""
-          },
-          "group": "default",
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "etfCompletenessIndicatorOptional",
-            "territory",
-            "inspireServiceType",
-            "etfIsValid",
-            "OrgForResource",
-            "inspireAnnex"
-          ],
-          "field_list": true,
-          "spyable": true,
-          "facet_limit": 30,
-          "foundResults": true,
-          "header_title": "Limit Your Search",
-          "toggle_element": null,
-          "show_queries": true,
-          "offset": 0,
-          "exportSize": null
-        }
-      ]
-    },
-    {
-      "title": "Events",
-      "height": "250px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 8,
-          "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "table",
-          "size": 10,
-          "pages": 500,
-          "offset": 0,
-          "style": {
-            "font-size": "9pt"
-          },
-          "overflow": "min-height",
-          "fields": [
-            "resourceTitle",
-            "etfCompletenessIndicator",
-            "etfIsValid",
-            "OrgForResource",
-            "inspireConformResource"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "spyable": true,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc&wt=json&rows=5000",
-            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[0 TO 100]&sort=etfCompletenessIndicator desc"
-          },
-          "field_list": false,
-          "status": "Stable",
-          "trimFactor": 300,
-          "normTimes": true,
-          "title": "Service metadata records",
-          "saveOption": "json",
-          "exportSize": 5000,
-          "exportAll": true,
-          "displayLinkIcon": true,
-          "imageFields": [],
-          "imgFieldWidth": "auto",
-          "imgFieldHeight": "85px",
-          "sort": [
-            "etfCompletenessIndicator",
-            "desc"
-          ],
-          "isLoadingImportantFieldOnly": false,
-          "important_fields": [
-            "etfCompletenessIndicator",
-            "etfIsValid",
-            "etfValidDate",
-            "resourceTitle",
-            "resourceType",
-            "OrgForResource",
-            "etfValidReport",
-            "etfValidReportUrl",
-            "inspireConformResource"
-          ],
-          "show_queries": true,
-          "couchbase": {
-            "bucket": "",
-            "document": "",
-            "view": ""
-          },
-          "overflowItems": [
-            {
-              "key": "scroll",
-              "value": "height"
-            },
-            {
-              "key": "expand",
-              "value": "min-height"
-            }
-          ],
-          "enableHyperlink": true,
-          "hyperlinkColumnForURI": "etfValidReportUrl",
-          "hyperlinkColumnHeader": "Report"
-        },
-        {
-          "span": 4,
+          "span": 10,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -627,19 +390,17 @@
             "ids": [
               0
             ],
-            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[0 TO 100]&facet=true&facet.field=etfIsValid&facet.limit=10&facet.missing=true&f.etfIsValid.facet.sort=count",
-            "custom": ""
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=OrgForResource&facet.limit=25&facet.missing=true&f.OrgForResource.facet.sort=count",
+            "custom": "&fq=+etfIsValid:true"
           },
           "mode": "count",
-          "field": "etfIsValid",
+          "field": "OrgForResource",
           "stats_field": "",
           "decimal_points": 0,
-          "exclude": [
-            ""
-          ],
+          "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 25,
           "sortBy": "count",
           "order": "descending",
           "style": {
@@ -650,8 +411,8 @@
           "labels": true,
           "logAxis": false,
           "arrangement": "horizontal",
-          "chart": "table",
-          "counter_pos": "above",
+          "chart": "bar",
+          "counter_pos": "right",
           "lastColor": "",
           "spyable": true,
           "show_queries": true,
@@ -715,7 +476,332 @@
             "#DEDAF7"
           ],
           "chartColorPalette": [],
-          "title": "Number of ETF valid services"
+          "title": "Valid services per organisation"
+        }
+      ]
+    },
+    {
+      "title": "Statistics",
+      "height": "350px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 4,
+          "editable": true,
+          "type": "rangeFacet",
+          "loadingEditor": false,
+          "mode": "count",
+          "time_field": "timestamp",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.range=etfCompletenessIndicator&facet.range.start=-1&facet.range.end=101&facet.range.gap=11\n",
+            "custom": ""
+          },
+          "max_rows": 100000,
+          "value_field": null,
+          "group_field": null,
+          "fill": 0,
+          "linewidth": 3,
+          "auto_int": false,
+          "resolution": 5,
+          "interval": "11",
+          "resolutions": [
+            5,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "spyable": true,
+          "zoomlinks": false,
+          "bars": true,
+          "stack": true,
+          "points": false,
+          "lines": false,
+          "lines_smooth": false,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": false,
+          "options": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "showChart": true,
+          "show_queries": true,
+          "title": "# by Completeness Mandatory",
+          "range_field": "etfCompletenessIndicator",
+          "minimum": -1,
+          "maximum": 100.1
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "rangeFacet",
+          "loadingEditor": false,
+          "mode": "count",
+          "time_field": "timestamp",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.range=etfCompletenessIndicatorOptional&facet.range.start=-1&facet.range.end=101&facet.range.gap=11\n",
+            "custom": ""
+          },
+          "max_rows": 100000,
+          "value_field": null,
+          "group_field": null,
+          "fill": 0,
+          "linewidth": 3,
+          "auto_int": false,
+          "resolution": 100,
+          "interval": "11",
+          "resolutions": [
+            5,
+            10,
+            25,
+            50,
+            75,
+            100
+          ],
+          "spyable": true,
+          "zoomlinks": false,
+          "bars": true,
+          "stack": true,
+          "points": false,
+          "lines": false,
+          "lines_smooth": false,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": false,
+          "options": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "showChart": true,
+          "show_queries": true,
+          "title": "# by Completeness Optional",
+          "range_field": "etfCompletenessIndicatorOptional",
+          "minimum": -1,
+          "maximum": 100
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "facet",
+          "loadingEditor": false,
+          "status": "Stable",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&facet.field=etfCompletenessIndicator&facet.field=inspireConformResource&wt=json",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=territory&facet.field=inspireServiceType&facet.field=etfIsValid&facet.field=OrgForResource&facet.field=inspireAnnex&facet.field=etfCompletenessIndicator&facet.field=inspireConformResource",
+            "custom": ""
+          },
+          "group": "default",
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "territory",
+            "inspireServiceType",
+            "etfIsValid",
+            "OrgForResource",
+            "inspireAnnex",
+            "etfCompletenessIndicator",
+            "inspireConformResource"
+          ],
+          "field_list": true,
+          "spyable": true,
+          "facet_limit": 30,
+          "foundResults": true,
+          "header_title": "Limit Your Search",
+          "toggle_element": null,
+          "show_queries": true,
+          "offset": 0,
+          "exportSize": null
+        }
+      ]
+    },
+    {
+      "title": "Events",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 12,
+          "editable": true,
+          "group": [
+            "default"
+          ],
+          "type": "table",
+          "size": 10,
+          "pages": 500,
+          "offset": 0,
+          "style": {
+            "font-size": "9pt"
+          },
+          "overflow": "min-height",
+          "fields": [
+            "resourceTitle",
+            "OrgForResource",
+            "etfCompletenessIndicator",
+            "etfCompletenessIndicatorOptional",
+            "inspireConformResource"
+          ],
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "spyable": true,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&sort=etfCompletenessIndicator desc&wt=json&rows=5000",
+            "basic_query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&sort=etfCompletenessIndicator desc"
+          },
+          "field_list": false,
+          "status": "Stable",
+          "trimFactor": 300,
+          "normTimes": true,
+          "title": "Service metadata records",
+          "saveOption": "json",
+          "exportSize": 5000,
+          "exportAll": true,
+          "displayLinkIcon": true,
+          "imageFields": [],
+          "imgFieldWidth": "auto",
+          "imgFieldHeight": "85px",
+          "sort": [
+            "etfCompletenessIndicator",
+            "desc"
+          ],
+          "isLoadingImportantFieldOnly": false,
+          "important_fields": [
+            "etfCompletenessIndicator",
+            "etfIsValid",
+            "etfValidDate",
+            "resourceTitle",
+            "resourceType",
+            "OrgForResource",
+            "etfValidReport",
+            "etfValidReportUrl",
+            "inspireConformResource"
+          ],
+          "show_queries": true,
+          "couchbase": {
+            "bucket": "",
+            "document": "",
+            "view": ""
+          },
+          "overflowItems": [
+            {
+              "key": "scroll",
+              "value": "height"
+            },
+            {
+              "key": "expand",
+              "value": "min-height"
+            }
+          ],
+          "enableHyperlink": true,
+          "hyperlinkColumnForURI": "etfValidReportUrl",
+          "hyperlinkColumnHeader": "Report"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 6,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=%2BdocumentType:metadata %2BresourceType:service&wt=json&rows=0&fq=etfCompletenessIndicator:[-1 TO 100]&fq=etfCompletenessIndicatorOptional:[-1 TO 100]&facet=true&facet.field=OrgForResource&facet.limit=25&facet.missing=true&f.OrgForResource.facet.sort=count",
+            "custom": "&fq=(etfIsValid:false+AND+inspireConformResource:true)"
+          },
+          "mode": "count",
+          "field": "OrgForResource",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 25,
+          "sortBy": "count",
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": true,
+          "arrangement": "horizontal",
+          "chart": "bar",
+          "counter_pos": "none",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "colorMode": "list",
+          "chartColors": [
+            "#7f3b08",
+            "#934607",
+            "#a85206",
+            "#bc6008",
+            "#ce710e",
+            "#e08214",
+            "#eb9733",
+            "#f7ad53",
+            "#fdc073",
+            "#fdd094",
+            "#fee0b6",
+            "#fbe9d0",
+            "#f8f2ea",
+            "#f0f1f4",
+            "#e4e5ef",
+            "#d8daeb",
+            "#c8c7e1",
+            "#b9b4d6",
+            "#a89fca",
+            "#9489bb",
+            "#8073ac",
+            "#6e549d",
+            "#5c368f",
+            "#4c1f7b",
+            "#3c0f63"
+          ],
+          "chartColorPalette": [],
+          "title": "Count inconsistent Reported vs Observed conformance"
         }
       ]
     }
@@ -751,9 +837,6 @@
       "dashboard",
       "data"
     ],
-    "global_params": "&fq=%2BdocumentType:metadata %2BresourceType:service",
-    "zkHost": "http://localhost:9998/znodes/v1/",
-    "server_type": "solr_server"
-  },
-  "server_type": "solr_server"
+    "global_params": "&fq=documentType:metadata"
+  }
 }
